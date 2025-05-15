@@ -1,6 +1,6 @@
 ﻿namespace Dyreinternatet.Service
 {
-    public class test
+    public class CustomerService
     {
     }
 }
