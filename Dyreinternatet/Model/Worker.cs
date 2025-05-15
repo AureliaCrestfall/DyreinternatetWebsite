@@ -45,5 +45,13 @@
             _mail = "dumbo@dumbo.com";
             _jobTitle = "Frivillig";
         }
+        public Worker(string name, int id, string telephone, string mail, string jobTitle)
+        {
+            _name = name;
+            _id = id;
+            _telephone = telephone;
+            _mail = mail;
+            _jobTitle = jobTitle;
+        }
     }
 }

@@ -38,5 +38,12 @@ namespace Dyreinternatet.Model
             _imagePath = "c/images";
             _author = "dumbo";
         }
+        public Blog(string title, string content, string imagePath, string author)
+        {
+            _title = title;
+            _content = content;
+            _imagePath = imagePath;
+            _author = author;
+        }
     }
 }

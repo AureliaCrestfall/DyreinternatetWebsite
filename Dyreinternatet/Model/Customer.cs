@@ -37,5 +37,12 @@
             _mail = "dumbo@dumbo.com";
             _adress = "Internat";
         }
+        public Customer(string name, string telephone, string mail, string adress)
+        {
+            _name = name;
+            _telephone = telephone;
+            _mail = mail;
+            _adress = adress;
+        }
     }
 }
