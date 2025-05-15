@@ -6,7 +6,7 @@ namespace Dyreinternatet.Repository
     {
 
         List<Worker> GetAll();
-        void Add();
-        void Remove();
+        void Add(Worker woker);
+        void Remove(int id);
     }
 }
