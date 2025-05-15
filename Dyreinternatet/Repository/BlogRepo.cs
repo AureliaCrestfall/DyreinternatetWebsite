@@ -2,5 +2,16 @@
 {
     public class BlogRepo:IBlogRepo
     {
+        public void Add()
+        {
+
+        }
+
+        public void Remove()
+        {
+
+        }
+
+
     }
 }
