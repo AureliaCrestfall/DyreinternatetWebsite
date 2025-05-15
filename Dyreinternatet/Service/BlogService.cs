@@ -1,4 +1,6 @@
 ﻿using Dyreinternatet.Repository;
+using Dyreinternatet.Model;
+
 
 namespace Dyreinternatet.Service
 {
