@@ -18,14 +18,14 @@ namespace Dyreinternatet.Repository
             return Workers;
         }
 
-        public void Add()
+        public void Add(Worker woker)
         {
-
+            Workers.Add(woker);
         }
 
-        public void Remove()
+        public void Remove(int id)
         {
-
+            Workers.RemoveAt(id);
         }
 
     }

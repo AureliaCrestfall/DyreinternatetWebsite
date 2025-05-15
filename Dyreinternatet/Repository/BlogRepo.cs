@@ -16,14 +16,14 @@ namespace Dyreinternatet.Repository
         {
             return Blogs;
         }
-        public void Add()
+        public void Add(Blog blog)
         {
-
+            Blogs.Add(blog);
         }
 
-        public void Remove()
+        public void Remove(int title)
         {
-
+            Blogs.RemoveAt(title);
         }
 
 

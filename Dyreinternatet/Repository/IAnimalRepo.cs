@@ -5,7 +5,7 @@ namespace Dyreinternatet.Repository
     {
 
         List<Animal> GetAll();
-        void Add();
-        void Remove();
+        void Add(Animal animals);
+        void Remove(int chipNumber);
     }
 }
