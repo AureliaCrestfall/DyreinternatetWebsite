@@ -14,6 +14,7 @@
         List<string> _visits;
         string _description;
 
+
         public int ChipNumber
         {
             get { return _chipNumber; }
@@ -81,6 +82,8 @@
             _description = "this is a bunny";
 
         }
+
+        //:this() means chaining with the before constructor animal
         public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this()
         {
 

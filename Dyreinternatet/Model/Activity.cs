@@ -38,7 +38,7 @@
             _title = "test";
             _content = "nijgrniognrgoinrgnoirgniornoigrgnoi";
             _imagePath = "/image0.jpg";
-            _author = "durinternated";
+            _author = "dyrinternated";
             _location = "roskilde";
 
         }
