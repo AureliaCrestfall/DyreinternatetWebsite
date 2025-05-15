@@ -5,8 +5,8 @@ namespace Dyreinternatet.Repository
     {
 
         List<Activity> GetAll();
-        void Add();
-        void Remove();
+        void Add(Activity activity);
+        void Remove(int title);
       
 
     }

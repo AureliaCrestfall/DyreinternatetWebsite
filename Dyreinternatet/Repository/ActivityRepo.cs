@@ -17,14 +17,14 @@ namespace Dyreinternatet.Repository
             return Activities;
         }
 
-        public void Add()
+        public void Add(Activity activity)
         {
-
+            Activities.Add(activity);
         }
 
-        public void Remove()
+        public void Remove(int title)
         {
-
+            Activities.RemoveAt(title); 
         }
 
        
