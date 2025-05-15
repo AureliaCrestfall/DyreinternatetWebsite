@@ -17,14 +17,14 @@ namespace Dyreinternatet.Repository
             return Animals;
         }
 
-        public void Add()
+        public void Add(Animal animal)
         {
-
+            Animals.Add(animal);
         }
 
-        public void Remove()
+        public void Remove(int chipNumber)
         {
-
+            Animals.RemoveAt(chipNumber);
         }
 
 
