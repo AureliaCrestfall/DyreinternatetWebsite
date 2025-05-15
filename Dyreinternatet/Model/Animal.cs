@@ -79,7 +79,7 @@
             _description = "this is a bunny";
 
         }
-        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string descripn):this()
+        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description) :this()
         {
 
            
@@ -89,7 +89,7 @@
             _race = race;
             _timeAtShelter = timeatshelter;
            
-            _description = descripn;
+            _description = description;
 
         }
 
