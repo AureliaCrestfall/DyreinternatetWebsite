@@ -79,6 +79,19 @@
             _description = "this is a bunny";
 
         }
+        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string descripn):this()
+        {
+
+           
+            _species = species;
+            _name = name;
+            _age = age;
+            _race = race;
+            _timeAtShelter = timeatshelter;
+           
+            _description = descripn;
+
+        }
 
 
 
