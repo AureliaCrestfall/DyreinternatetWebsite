@@ -7,7 +7,8 @@
         string _name;
         int _age;
         string _race;
-        enum _enum;
+        enum _genderenum {Male,Female};
+        string _gender;
         DateTime _timeAtShelter;
         string[] _statuses;
         List<string> _visits;
@@ -39,9 +40,10 @@
             set { _race = value; }
 
         }
-        public enum Gender
+        public string Gender
         {
-            
+            get { return _gender; }
+            set { _gender = value; }
         }
         public DateTime TimeAtShelter
         {
@@ -79,7 +81,7 @@
             _description = "this is a bunny";
 
         }
-        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description) :this()
+        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this()
         {
 
            
@@ -90,6 +92,11 @@
             _timeAtShelter = timeatshelter;
            
             _description = description;
+
+            
+            
+               
+            
 
         }
 
