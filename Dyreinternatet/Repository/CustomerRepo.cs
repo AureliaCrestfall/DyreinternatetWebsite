@@ -18,14 +18,14 @@ namespace Dyreinternatet.Repository
             return Customers;
         }
 
-        public void Add()
+        public void Add(Customer customer)
         {
-
+            Customers.Add(customer);
         }
 
-        public void Remove()
+        public void Remove(int phoneNumber)
         {
-
+            Customers.RemoveAt(phoneNumber);
         }
 
     }
