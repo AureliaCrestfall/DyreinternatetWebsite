@@ -31,5 +31,12 @@ namespace Dyreinternatet.Model
             get { return _author; }
             set { _author = value; }
         }
+        public Blog()
+        {
+            _title = "dyrenes dag";
+            _content = "det er dyrenes dag";
+            _imagePath = "c/images";
+            _author = "dumbo";
+        }
     }
 }

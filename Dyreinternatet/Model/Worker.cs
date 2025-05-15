@@ -37,5 +37,13 @@
             get { return _jobTitle; }
             set { _jobTitle = value; }
         }
+        public Worker()
+        {
+            _name = "Dumbo";
+            _id = 0;
+            _telephone = "123456";
+            _mail = "dumbo@dumbo.com";
+            _jobTitle = "Frivillig";
+        }
     }
 }

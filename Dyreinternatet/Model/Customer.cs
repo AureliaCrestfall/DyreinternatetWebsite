@@ -29,5 +29,13 @@
             get { return _adress; }
             set { _adress = value; }
         }
+
+        public Customer()
+        {
+            _name = "Dumbo";
+            _telephone = "123456";
+            _mail = "dumbo@dumbo.com";
+            _adress = "Internat";
+        }
     }
 }
