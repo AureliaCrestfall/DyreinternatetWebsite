@@ -5,19 +5,19 @@ namespace Dyreinternatet.Service
     public class BlogService
     {
 
-        IActivityRepo _activityRepo;
+        IBlogRepo _blogRepo;
 
-        public void Add(Activity activity)
+        public void Add(Blog blog)
         {
-            _activityRepo.Add(activity);
+            _blogRepo.Add(blog);
         }
         public void Remove(int title)
         {
-            _activityRepo.Remove(title);
+            _blogRepo.Remove(title);
         }
-        public List<Activity> GetAll()
+        public List<Blog> GetAll()
         {
-            return _activityRepo.GetAll();
+            return _blogRepo.GetAll();
         }
     }
 }

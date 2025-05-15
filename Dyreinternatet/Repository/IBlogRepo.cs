@@ -6,7 +6,7 @@ namespace Dyreinternatet.Repository
     {
 
         List<Blog> GetAll();
-        void Add();
-        void Remove();
+        void Add(Blog blog);
+        void Remove(int title);
     }
 }
