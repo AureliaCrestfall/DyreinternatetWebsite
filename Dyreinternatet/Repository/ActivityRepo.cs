@@ -1,6 +1,6 @@
 ﻿namespace Dyreinternatet.Repository
 {
-    public class ActivityRepo
+    public class ActivityRepo:IActivityRepo
     {
     }
 }

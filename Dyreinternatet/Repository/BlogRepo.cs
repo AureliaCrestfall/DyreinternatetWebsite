@@ -1,6 +1,6 @@
 ﻿namespace Dyreinternatet.Repository
 {
-    public class BlogRepo
+    public class BlogRepo:IBlogRepo
     {
     }
 }

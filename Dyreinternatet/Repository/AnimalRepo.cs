@@ -1,6 +1,6 @@
 ﻿namespace Dyreinternatet.Repository
 {
-    public class AnimalRepo
+    public class AnimalRepo:IAnimalRepo
     {
     }
 }
