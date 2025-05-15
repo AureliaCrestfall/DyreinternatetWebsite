@@ -12,6 +12,11 @@ namespace Dyreinternatet.Repository
             set { _activities = value; }
         }
 
+        public List<Activity> GetAll()
+        {
+            return Activities;
+        }
+
         public void Add()
         {
 
