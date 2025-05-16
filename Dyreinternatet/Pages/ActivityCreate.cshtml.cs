@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dyreinternatet.Pages
 {
-    public class JoinEventModel : PageModel
+    public class ActivityCreateModel : PageModel
     {
         public void OnGet()
         {
