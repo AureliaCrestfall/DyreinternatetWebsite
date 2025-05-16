@@ -1,3 +1,6 @@
+using Dyreinternatet.Repository;
+using Dyreinternatet.Service;
+
 namespace Dyreinternatet
 {
     public class Program
@@ -5,6 +8,12 @@ namespace Dyreinternatet
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+      
+            
+            builder.Services.AddScoped<IAnimalRepo, AnimalRepo>();
+            builder.Services.AddScoped<AnimalService>();
+            // Add services to the container.
+            builder.Services.AddRazorPages();
 
             // Add services to the container.
             builder.Services.AddRazorPages();

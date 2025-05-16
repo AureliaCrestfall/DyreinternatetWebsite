@@ -6,27 +6,33 @@ namespace Dyreinternatet.Repository
 
         List<Animal> _animals;
 
-        protected List<Animal> Animals
-        {
-            get { return _animals; }
-            set { _animals = value; }
-        }
+        //public List<Animal> Animals
+        //{
+        //    get { return _animals; }
+        //    set { _animals = value; }
+        //}
 
         public List<Animal> GetAll()
         {
-            return Animals;
+            return _animals;
         }
 
         public void Add(Animal animal)
         {
-            Animals.Add(animal);
+            _animals.Add(animal);
         }
 
         public void Remove(int chipNumber)
         {
-            Animals.RemoveAt(chipNumber);
+            _animals.RemoveAt(chipNumber);
         }
 
+        
+        public AnimalRepo()
+        {
+            _animals = new List<Animal>();
+            _animals.Add(new Animal());
+        }
 
     }
 }

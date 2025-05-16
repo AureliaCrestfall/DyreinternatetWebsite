@@ -2,3 +2,22 @@
 @model Dyreinternatet.Pages.AnimalsModel
 @{
 }
+<link href="~/css/stylesheet.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+<h1 class="text-center">Dyr til adoption</h1>
+<p class="text-center">Se vores søde dyr til adoption her</p>
+<html>
+
+<div class="row row-cols-3">
+    @foreach (var Animal in Model.Animals)
+    {
+                <div class="card-body"> 
+                     <h4 class="card-title">@Animal.Name</h4> 
+                     <p class="card-text">Alder: @Animal.Age<br />Art: @Animal.Species</p> 
+                     <a href="#" class="btn btn-primary">Rediger</a> 
+               </div>
+         
+    } 
+    <p><a href="AnimalCreate">Klik her</a> for at tilføje flere dyr til internattet</p>
+

@@ -7,6 +7,11 @@ namespace Dyreinternatet.Service
 
         IAnimalRepo _animalRepo;
 
+        public AnimalService(IAnimalRepo repo)
+        {
+            _animalRepo = repo;
+        }
+
         public void Add(Animal animals)
         {
             _animalRepo.Add(animals);
