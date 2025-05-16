@@ -7,13 +7,12 @@
         string _name;
         int _age;
         string _race;
-        enum _genderenum {Male,Female};
-        string _gender;
+        enum Genderenum {Male,Female, Unknown};
         DateTime _timeAtShelter;
         string[] _statuses;
         List<string> _visits;
         string _description;
-
+        Genderenum _gender;
 
         public int ChipNumber
         {
@@ -41,7 +40,7 @@
             set { _race = value; }
 
         }
-        public string Gender
+        public Genderenum Gender
         {
             get { return _gender; }
             set { _gender = value; }
@@ -95,6 +94,10 @@
             _timeAtShelter = timeatshelter;
            
             _description = description;
+            if ((gender != null) && (gender.Equals("female")))
+            {
+                _gender = Genderenum.Female;
+            }
 
             
             
