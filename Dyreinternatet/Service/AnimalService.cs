@@ -24,5 +24,10 @@ namespace Dyreinternatet.Service
         {
             return _animalRepo.GetAll();
         }
+
+        public void AddVisits(int chipNumber, string visits)
+        {
+            _animalRepo.AddVisits(chipNumber, visits);
+        }
     }
 }
