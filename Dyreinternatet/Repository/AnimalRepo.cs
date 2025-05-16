@@ -27,6 +27,11 @@ namespace Dyreinternatet.Repository
             Animals.RemoveAt(chipNumber);
         }
 
+        public void AddVisits(int chipNumber, string visits)
+        {
+            _animals[chipNumber].Visits.Add(visits);
+        }
+
 
     }
 }
