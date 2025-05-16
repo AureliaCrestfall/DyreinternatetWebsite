@@ -7,7 +7,7 @@
         string _name;
         int _age;
         string _race;
-        enum Genderenum {Male,Female, Unknown};
+        public  enum Genderenum {Male,Female,Unknown};
         DateTime _timeAtShelter;
         string[] _statuses;
         List<string> _visits;
@@ -98,11 +98,20 @@
             {
                 _gender = Genderenum.Female;
             }
+            else if ((gender != null) && (gender.Equals("male")))
+            {
+                _gender = Genderenum.Male;
+            }
+            else
+            {
+                _gender = Genderenum.Unknown;
 
-            
-            
-               
-            
+            }
+
+
+
+
+
 
         }
 
