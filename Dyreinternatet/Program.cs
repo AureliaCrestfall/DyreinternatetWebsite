@@ -12,6 +12,14 @@ namespace Dyreinternatet
             
             builder.Services.AddScoped<IAnimalRepo, AnimalRepo>();
             builder.Services.AddScoped<AnimalService>();
+            builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
+            builder.Services.AddScoped<CustomerService>();
+            builder.Services.AddScoped<IWorkerRepo, WorkerRepo>();
+            builder.Services.AddScoped<WorkerService>();
+            builder.Services.AddScoped<IBlogRepo, BlogRepo>();
+            builder.Services.AddScoped<BlogService>();
+            builder.Services.AddScoped<IActivityRepo, ActivityRepo>();
+            builder.Services.AddScoped<ActivityService>();
             // Add services to the container.
             builder.Services.AddRazorPages();
 

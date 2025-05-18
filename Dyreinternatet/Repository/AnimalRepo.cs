@@ -1,11 +1,17 @@
 ﻿using Dyreinternatet.Model;
+using System.Diagnostics;
 namespace Dyreinternatet.Repository
 {
     public class AnimalRepo:IAnimalRepo
     {
 
-        List<Animal> _animals;
-
+       private List<Animal> _animals;
+        public AnimalRepo()
+        {
+            _animals = new List<Animal>();
+            seed();
+            //_animals.Add(new Animal());
+        }
         //public List<Animal> Animals
         //{
         //    get { return _animals; }
@@ -17,9 +23,14 @@ namespace Dyreinternatet.Repository
             return _animals;
         }
 
-        public void Add(Animal animal)
+        public void Add(Animal animals)
         {
-            _animals.Add(animal);
+            Debug.WriteLine(animals.Name);
+
+
+            _animals.Add(animals);
+            Debug.WriteLine(_animals[3]);
+
         }
 
         public void Remove(int chipNumber)
@@ -31,13 +42,17 @@ namespace Dyreinternatet.Repository
         {
             _animals[chipNumber].Visits.Add(visits);
         }
-
-        
-        public AnimalRepo()
+        void seed()
         {
-            _animals = new List<Animal>();
             _animals.Add(new Animal());
+            _animals.Add(new Animal());
+
+            _animals.Add(new Animal());
+
         }
+
+
+
 
     }
 }

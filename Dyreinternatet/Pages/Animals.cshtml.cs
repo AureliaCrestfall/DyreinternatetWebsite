@@ -10,16 +10,18 @@ namespace Dyreinternatet.Pages
 
         private readonly AnimalService _animalS;
 
+        [BindProperty]
+        public List<Animal> Animals { set; get; }
         public AnimalsModel(AnimalService animalS)
         {
+            Animals = animalS.GetAll();
+
             _animalS = animalS;
         }
-
-        public List<Animal> Animals { set; get; }
+        
 
         public void OnGet()
         {
-            Animals = _animalS.GetAll();
         }
     }
 }
