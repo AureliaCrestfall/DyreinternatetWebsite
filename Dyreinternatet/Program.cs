@@ -10,16 +10,16 @@ namespace Dyreinternatet
             var builder = WebApplication.CreateBuilder(args);
       
             
-            builder.Services.AddScoped<IAnimalRepo, AnimalRepo>();
-            builder.Services.AddScoped<AnimalService>();
-            builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
-            builder.Services.AddScoped<CustomerService>();
-            builder.Services.AddScoped<IWorkerRepo, WorkerRepo>();
-            builder.Services.AddScoped<WorkerService>();
-            builder.Services.AddScoped<IBlogRepo, BlogRepo>();
-            builder.Services.AddScoped<BlogService>();
-            builder.Services.AddScoped<IActivityRepo, ActivityRepo>();
-            builder.Services.AddScoped<ActivityService>();
+            builder.Services.AddSingleton<IAnimalRepo, AnimalRepo>();
+            builder.Services.AddSingleton<AnimalService>();
+            builder.Services.AddSingleton<ICustomerRepo, CustomerRepo>();
+            builder.Services.AddSingleton<CustomerService>();
+            builder.Services.AddSingleton<IWorkerRepo, WorkerRepo>();
+            builder.Services.AddSingleton<WorkerService>();
+            builder.Services.AddSingleton<IBlogRepo, BlogRepo>();
+            builder.Services.AddSingleton<BlogService>();
+            builder.Services.AddSingleton<IActivityRepo, ActivityRepo>();
+            builder.Services.AddSingleton<ActivityService>();
             // Add services to the container.
             builder.Services.AddRazorPages();
 

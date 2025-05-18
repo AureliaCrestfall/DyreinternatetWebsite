@@ -1,5 +1,6 @@
 using Dyreinternatet.Model;
 using Dyreinternatet.Service;
+using Dyreinternatet.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 

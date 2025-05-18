@@ -25,7 +25,7 @@ namespace Dyreinternatet.Repository
 
         public void Add(Animal animals)
         {
-            Debug.WriteLine(animals.Name);
+            Debug.WriteLine("hej"+animals.Name);
 
 
             _animals.Add(animals);
