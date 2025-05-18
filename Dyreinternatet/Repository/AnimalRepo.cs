@@ -25,12 +25,7 @@ namespace Dyreinternatet.Repository
 
         public void Add(Animal animals)
         {
-            Debug.WriteLine("hej"+animals.Name);
-
-
             _animals.Add(animals);
-            Debug.WriteLine(_animals[3]);
-
         }
 
         public void Remove(int chipNumber)

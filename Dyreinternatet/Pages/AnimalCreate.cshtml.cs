@@ -26,9 +26,7 @@ namespace Dyreinternatet.Pages
             }
             public IActionResult OnPost()
             {
-            Debug.WriteLine("test ");
 
-            Debug.WriteLine(  Animal.Name);
             _aniSer.Add(Animal);
                 return RedirectToPage("/Animals");
             }
