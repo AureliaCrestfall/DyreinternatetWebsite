@@ -4,32 +4,30 @@ namespace Dyreinternatet.Repository
 {
     public class WorkerRepo:IWorkerRepo
     {
-        IWorkerRepo _workerRepo;
         List<Worker> _workers;
-        public WorkerRepo(IWorkerRepo workerRepo)
+        public WorkerRepo()
         {
-            _workerRepo = workerRepo;
+            _workers = new List<Worker>();
         }
-
-        protected List<Worker> Workers
-        {
-            get { return _workers; }
-            set { _workers = value; }
-        }
+        //public List<Worker> Workers
+        //{
+        //    get { return _workers; }
+        //    set { _workers = value; }
+        //}
 
         public List<Worker> GetAll()
         {
-            return Workers;
+            return _workers;
         }
 
         public void Add(Worker woker)
         {
-            _workerRepo.Add(woker);
+            _workers.Add(woker);
         }
 
         public void Remove(int id)
         {
-            Workers.RemoveAt(id);
+            _workers.RemoveAt(id);
         }
 
     }
