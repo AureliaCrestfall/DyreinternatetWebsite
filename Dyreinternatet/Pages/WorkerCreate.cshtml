@@ -2,3 +2,34 @@
 @model Dyreinternatet.Pages.WorkerCreateModel
 @{
 }
+<body>
+    <container-sm>
+        <div class="text-center">
+            <h1>Opret Medarbejder</h1>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <form method="post">
+
+                    <div class="form-group mt-2">
+                        <label for="inputComment">Skriv navn her: </label>
+                        <input type="text" asp-for="Worker.Name" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv tlf nr her: </label>
+                        <input type="text" asp-for="Worker.Telephone" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv E-Mail her: </label>
+                        <input type="text" asp-for="Worker.Mail" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv Job Titel her: </label>
+                        <input type="text" asp-for="Worker.JobTitle" aria-describedby="textHelp" placeholder="Enter a comment">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </form>
+                </<div>
+                </div>
+            </div>
+        </div>
+    </container-sm>
+</body>

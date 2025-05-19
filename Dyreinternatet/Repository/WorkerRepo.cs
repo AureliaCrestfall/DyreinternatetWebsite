@@ -4,8 +4,12 @@ namespace Dyreinternatet.Repository
 {
     public class WorkerRepo:IWorkerRepo
     {
-
+        IWorkerRepo _workerRepo;
         List<Worker> _workers;
+        public WorkerRepo(IWorkerRepo workerRepo)
+        {
+            _workerRepo = workerRepo;
+        }
 
         protected List<Worker> Workers
         {
@@ -20,7 +24,7 @@ namespace Dyreinternatet.Repository
 
         public void Add(Worker woker)
         {
-            Workers.Add(woker);
+            _workerRepo.Add(woker);
         }
 
         public void Remove(int id)
