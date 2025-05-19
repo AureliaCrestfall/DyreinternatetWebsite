@@ -4,4 +4,16 @@
 }
 <link href="~/css/stylesheet.css" rel="stylesheet" />
 
+<div class="row row-cols-3">
+    @foreach (var Worker in Model.Workers)
+    {
+        <div class="card-body">
+            <h4 class="card-title">@Worker.Name</h4>
+            <p class="card-text">Telefonnummer: @Worker.Telephone<br />Mail: @Worker.Mail</p>
+            <a href="#" class="btn btn-primary">Rediger</a>
+        </div>
+
+    }
+</div>
+
 <p><a href="WorkerCreate">Klik her</a> for at tilføje flere medarbejdere til internattet</p>
