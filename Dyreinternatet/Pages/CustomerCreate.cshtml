@@ -2,3 +2,34 @@
 @model Dyreinternatet.Pages.CustomerCreateModel
 @{
 }
+<body>
+    <container-sm>
+        <div class="text-center">
+            <h1>Opret Kunde</h1>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <form method="post">
+
+                    <div class="form-group mt-2">
+                        <label for="inputComment">Skriv navn her: </label>
+                        <input type="text" asp-for="Customer.Name" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv tlf nr her: </label>
+                        <input type="text" asp-for="Customer.Telephone" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv E-Mail her: </label>
+                        <input type="text" asp-for="Customer.Mail" aria-describedby="textHelp" placeholder="Enter a comment">
+
+                        <label for="inputComment">Skriv Adresse her: </label>
+                        <input type="text" asp-for="Customer.Adress" aria-describedby="textHelp" placeholder="Enter a comment">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </form>
+                </<div>
+                </div>
+            </div>
+        </div>
+    </container-sm>
+</body>

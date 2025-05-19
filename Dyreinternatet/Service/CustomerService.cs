@@ -5,6 +5,10 @@ namespace Dyreinternatet.Service
     public class CustomerService
     {
         ICustomerRepo _customerRepo;
+        public CustomerService(ICustomerRepo CustomerRepo)
+        {
+            _customerRepo = CustomerRepo;
+        }
 
         public void Add(Customer customer)
         {
