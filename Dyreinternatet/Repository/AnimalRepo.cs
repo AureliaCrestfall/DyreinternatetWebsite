@@ -42,7 +42,7 @@ namespace Dyreinternatet.Repository
             _animals.Add(new Animal());
             _animals.Add(new Animal());
 
-            _animals.Add(new Animal());
+            _animals.Add(new Animal("Buster er en kat", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male"));
 
         }
 
