@@ -5,8 +5,16 @@ namespace Dyreinternatet.Service
 {
     public class AnimalService
     {
+        Random rnd = new Random();
 
         IAnimalRepo _animalRepo;
+
+        public string rndimage(string folder)
+        {
+            string[] paths = Directory.GetFiles(folder);
+            int rndint = rnd.Next(paths.Length);
+           return paths[rndint];
+        }
 
         public AnimalService(IAnimalRepo repo)
         {

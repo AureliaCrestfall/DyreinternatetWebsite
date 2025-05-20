@@ -1,4 +1,6 @@
-﻿namespace Dyreinternatet.Model
+﻿using System.Diagnostics;
+
+namespace Dyreinternatet.Model
 {
     public class Animal
     {
@@ -74,6 +76,7 @@
         }
         public Animal()
         {
+            
             _chipNumber = 0;
             _species = "bunny";
             _name = "bunny";
@@ -84,9 +87,10 @@
             //_statuses = new string[]();
             _description = "this is a bunny";
         }
-        public Animal(int chip,string path):this()
+        public Animal(int chip) : this()
         {
-
+            
+            
             _chipNumber = chip;
             _species = "bunny";
             _name = "bunny";
@@ -96,15 +100,14 @@
             _visits = new List<string>();
             //_statuses = new string[]();
             _description = "this is a bunny";
-            _imgPath = path;
 
         }
 
         //:this() means chaining with the before constructor animal
-        public Animal(int chip,string path,string species,string name,string race,int age,DateTime timeatshelter,string description,string gender,int pathInt) :this(chip,path)
+        public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender) : this(chip)
         {
 
-           
+
             _species = species;
             _name = name;
             _age = age;
@@ -125,7 +128,12 @@
                 _gender = Genderenum.Unknown;
 
             }
+        }
 
+         public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender,string path) : this( chip, species, name, race, age, timeatshelter, description,  gender)
+         {
+            _imgPath = path;
+         }
 
 
 
@@ -135,5 +143,5 @@
 
 
 
-    }
 }
+

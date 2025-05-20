@@ -27,9 +27,12 @@ namespace Dyreinternatet.Pages
             }
             public IActionResult OnPost(int idchreate)
             {
+            string folderlocation = "Image/";
             Animal.ChipNumber = idchreate;
+            Animal.ImgPath = _aniSer.rndimage(folderlocation);
             _aniSer.Add(Animal);
-                return RedirectToPage("/Animals");
+
+            return RedirectToPage("/Animals");
             }
         }
     }
