@@ -12,21 +12,24 @@ namespace Dyreinternatet.Pages
             private AnimalService _aniSer;
             [BindProperty]
             public Animal Animal { set; get; }
+            [BindProperty]
+            public    int idcreate { set; get; }
 
-
-            public AnimalCreateModel(AnimalService aniser)
+            public AnimalCreateModel(AnimalService aniser,int idcheate)
             {
-                Animal = new Animal();
+                Animal = new Animal(idcheate);
                 _aniSer = aniser;
             }
 
-            public void OnGet()
+            public void OnGet(int idceate)
             {
-
+              idcreate = idceate;
+            Debug.WriteLine("fefefe" + idceate);
             }
             public IActionResult OnPost()
             {
-
+            //Debug.WriteLine("fefe" + idcreate);
+            //Animal.ChipNumber = idcreate;
             _aniSer.Add(Animal);
                 return RedirectToPage("/Animals");
             }

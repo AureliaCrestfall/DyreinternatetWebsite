@@ -2,7 +2,6 @@
 {
     public class Animal
     {
-        static int number = 0;
         int _chipNumber;
         string _species;
         string _name;
@@ -68,10 +67,10 @@
             set { _description = value; }
         }
 
-        public Animal()
+        public Animal(int chip)
         {
 
-            _chipNumber = number++;
+            _chipNumber = chip;
             _species = "bunny";
             _name = "bunny";
             _age = 12;
@@ -84,7 +83,7 @@
         }
 
         //:this() means chaining with the before constructor animal
-        public Animal(string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this()
+        public Animal(int chip,string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this(chip)
         {
 
            
@@ -93,7 +92,7 @@
             _age = age;
             _race = race;
             _timeAtShelter = timeatshelter;
-           
+            gender = gender.ToLower();
             _description = description;
             if ((gender != null) && (gender.Equals("female")))
             {
