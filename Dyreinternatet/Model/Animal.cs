@@ -66,8 +66,19 @@
             get {return _description; }
             set { _description = value; }
         }
-
-        public Animal(int chip)
+        public Animal()
+        {
+            _chipNumber = 0;
+            _species = "bunny";
+            _name = "bunny";
+            _age = 12;
+            _race = "bunny";
+            _timeAtShelter = DateTime.Now;
+            _visits = new List<string>();
+            //_statuses = new string[]();
+            _description = "this is a bunny";
+        }
+        public Animal(int chip):this()
         {
 
             _chipNumber = chip;
