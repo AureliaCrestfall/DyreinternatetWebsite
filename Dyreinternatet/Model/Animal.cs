@@ -2,6 +2,7 @@
 {
     public class Animal
     {
+        static int number = 0;
         int _chipNumber;
         string _species;
         string _name;
@@ -70,7 +71,7 @@
         public Animal()
         {
 
-            _chipNumber = _chipNumber++;
+            _chipNumber = number++;
             _species = "bunny";
             _name = "bunny";
             _age = 12;
