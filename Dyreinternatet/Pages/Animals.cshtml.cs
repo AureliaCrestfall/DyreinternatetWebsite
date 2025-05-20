@@ -11,7 +11,7 @@ namespace Dyreinternatet.Pages
     {
 
         private readonly AnimalService _animalS;
-       public  int idceate = 1;
+       public  int idceate = 0;
 
 
         [BindProperty]

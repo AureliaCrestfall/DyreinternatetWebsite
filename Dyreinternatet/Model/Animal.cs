@@ -13,6 +13,12 @@
         List<string> _visits;
         string _description;
         Genderenum _gender;
+        string _imgPath;
+        public string ImgPath
+        {
+            get { return _imgPath; }
+            set { _imgPath = value; }
+        }
 
         public int ChipNumber
         {
@@ -78,7 +84,7 @@
             //_statuses = new string[]();
             _description = "this is a bunny";
         }
-        public Animal(int chip):this()
+        public Animal(int chip,string path):this()
         {
 
             _chipNumber = chip;
@@ -90,11 +96,12 @@
             _visits = new List<string>();
             //_statuses = new string[]();
             _description = "this is a bunny";
+            _imgPath = path;
 
         }
 
         //:this() means chaining with the before constructor animal
-        public Animal(int chip,string species,string name,string race,int age,DateTime timeatshelter,string description,string gender) :this(chip)
+        public Animal(int chip,string path,string species,string name,string race,int age,DateTime timeatshelter,string description,string gender,int pathInt) :this(chip,path)
         {
 
            
