@@ -5,6 +5,7 @@ namespace Dyreinternatet.Model
     public class Animal
     {
         int _chipNumber;
+        int _id;
         string _species;
         string _name;
         int _age;
@@ -16,6 +17,11 @@ namespace Dyreinternatet.Model
         string _description;
         Genderenum _gender;
         string _imgPath;
+        public int ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
         public string ImgPath
         {
             get { return _imgPath; }
@@ -89,8 +95,7 @@ namespace Dyreinternatet.Model
         }
         public Animal(int chip) : this()
         {
-            
-            
+
             _chipNumber = chip;
             _species = "bunny";
             _name = "bunny";
@@ -100,6 +105,7 @@ namespace Dyreinternatet.Model
             _visits = new List<string>();
             //_statuses = new string[]();
             _description = "this is a bunny";
+            _id = _chipNumber;
 
         }
 

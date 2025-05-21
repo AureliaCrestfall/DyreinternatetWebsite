@@ -67,15 +67,19 @@ namespace Dyreinternatet.Service
                 {
                     if (bubble[i].Age > bubble[i + 1].Age)
                     {
-
                         (bubble[i], bubble[i + 1]) = (bubble[i + 1], bubble[i]);
+                        
                         swapped = true;
                     }
                 }
             }
-            foreach(Animal animal in bubble)
+            for (int i = 0; i < n ; i++)
             {
-                Debug.WriteLine(animal.Name);               
+                bubble[i].ID = i;
+            }
+                foreach (Animal animal in bubble)
+            {
+                Debug.WriteLine(animal.Age);               
             }
             return bubble;
         }
