@@ -2,10 +2,15 @@
 @model Dyreinternatet.Pages.AnimalInfoModel
 @{
 }
+
+<link href="~/css/imagescss.css" rel="stylesheet" />
+
 <body>
     <container-sm>
         <div class="text-center">
             <h1>Ekstra info om søde @Model.Animals[Model.idinfo].Name</h1>
+            <img src="@Model.Animals[Model.idinfo].ImgPath" class="card-img-top" alt="animal Image">
+
         </div>
     </container-sm>
 </body>

@@ -23,7 +23,7 @@ namespace Dyreinternatet.Service
 
         public void Add(Animal animals)
         {
-
+            
             _animalRepo.Add(animals);
         }
         public void Remove(int chipNumber)
