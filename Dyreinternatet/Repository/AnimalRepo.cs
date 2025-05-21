@@ -23,6 +23,10 @@ namespace Dyreinternatet.Repository
         {
             return _animals;
         }
+        public List<Animal> GetAllFilteredAnimals()
+        {
+            return _filteredAnimals;
+        }
 
         public void Add(Animal animals)
         {
