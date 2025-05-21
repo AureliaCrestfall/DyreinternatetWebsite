@@ -6,6 +6,7 @@ namespace Dyreinternatet.Repository
     {
 
        private List<Animal> _animals;
+       private List<Animal> _filteredAnimals;
         public AnimalRepo()
         {
             _animals = new List<Animal>();
@@ -27,6 +28,10 @@ namespace Dyreinternatet.Repository
         {
             _animals.Add(animals);
         }
+        public void AddFilteredAnimal(Animal animal)
+        {
+            _filteredAnimals.Add(animal);
+        }
 
         public void Remove(int chipNumber)
         {
@@ -46,8 +51,21 @@ namespace Dyreinternatet.Repository
 
         }
 
+        public void Filter(string species, string gender)
+        {
+            _filteredAnimals.Clear();
 
+            if (species == "hund")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species == "hund")
+                    {
+                        AddFilteredAnimal(animal);
+                    }
+                }
+            }
 
-
+        }
     }
 }
