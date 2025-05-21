@@ -68,7 +68,11 @@ namespace Dyreinternatet.Pages
                {
                     Species = "katkanin";
                }
-                Animals = _animalS.Filter(Species, Gender);
+            if (dog == true && cat == true && rabbit == true)
+            {
+                Species = "hundkatkanin";
+            }
+            Animals = _animalS.Filter(Species, Gender);
             //FilteredAnimals = _animalS.GetAllFilteredAnimals();
             //Animals = _animalS.GetAllFilteredAnimals(); 
         }

@@ -133,6 +133,26 @@ namespace Dyreinternatet.Repository
                     }
                 }
             }
+            else if (species == "hundkatkanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kanin")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                    if (animal.Species.ToLower() == "hund")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                    if (animal.Species.ToLower() == "kat")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
+
+
             Debug.WriteLine("filter test species :" + species+ "test gender: " + gender);
             return _filteredAnimals;
         }
