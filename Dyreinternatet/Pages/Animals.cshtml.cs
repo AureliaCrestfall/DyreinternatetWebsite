@@ -9,9 +9,11 @@ namespace Dyreinternatet.Pages
 {
     public class AnimalsModel : PageModel
     {
-
         private readonly AnimalService _animalS;
         public  int idceate = 0;
+        public List <Animal> FilteredAnimals {get; set;}
+        public string Species { get; set;}
+        public string Gender { get; set;}
 
 
         [BindProperty]
@@ -19,14 +21,19 @@ namespace Dyreinternatet.Pages
         public AnimalsModel(AnimalService animalS)
         {
             Animals = animalS.GetAll();
-
+            FilteredAnimals = animalS.GetAllFilteredAnimals();
             _animalS = animalS;
             foreach(Animal animal in Animals)
             {
                 idceate++;
             }
         }
-        
+        public void OnPostFilter()
+        {
+            _animalS.Filter(Species, Gender);
+            FilteredAnimals = _animalS.GetAllFilteredAnimals();
+            Animals = _animalS.GetAll();
+        }
        
         public void OnGet()
         {

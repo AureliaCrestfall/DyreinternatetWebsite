@@ -35,10 +35,18 @@ namespace Dyreinternatet.Service
         {
             return _animalRepo.GetAll();
         }
+        public List<Animal> GetAllFilteredAnimals()
+        {
+            return _animalRepo.GetAllFilteredAnimals();
+        }
 
         public void AddVisits(int chipNumber, string visits)
         {
             _animalRepo.AddVisits(chipNumber, visits);
+        }
+        public void Filter(string species, string gender)
+        {
+            _animalRepo.Filter(species, gender);
         }
 
        public List<Animal> Sort(List<Animal> bubble)
