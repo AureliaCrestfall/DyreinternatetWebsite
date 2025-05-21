@@ -58,7 +58,6 @@ namespace Dyreinternatet.Service
             {
                 n++;
             }
-            Debug.WriteLine(n);
             while (swapped != false)
             {
 
@@ -77,10 +76,7 @@ namespace Dyreinternatet.Service
             {
                 bubble[i].ID = i;
             }
-                foreach (Animal animal in bubble)
-            {
-                Debug.WriteLine(animal.Age);               
-            }
+            
             return bubble;
         }
 

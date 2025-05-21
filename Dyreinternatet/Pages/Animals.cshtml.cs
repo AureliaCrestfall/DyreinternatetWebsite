@@ -51,15 +51,24 @@ namespace Dyreinternatet.Pages
             {
                 Species = "kat";
             }
-            else if (rabbit == true)
+            if (rabbit == true)
             {
                 Species = "kanin";
             }
             if (dog == true && cat == true)
             {
-                Species = "hund" + "cat";
+                Species = "hundkat";
             }
-            Animals = _animalS.Filter(Species, Gender);
+            if (dog == true && rabbit == true)
+              {
+                    Species = "hundkanin";
+              }
+
+               if(cat == true && rabbit == true)
+               {
+                    Species = "katkanin";
+               }
+                Animals = _animalS.Filter(Species, Gender);
             //FilteredAnimals = _animalS.GetAllFilteredAnimals();
             //Animals = _animalS.GetAllFilteredAnimals(); 
         }

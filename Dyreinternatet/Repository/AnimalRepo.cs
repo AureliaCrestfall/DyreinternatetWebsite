@@ -91,36 +91,48 @@ namespace Dyreinternatet.Repository
                     }
                 }
             }
-            //else if (species == "kat" + "hund")
-            //{
-            //    foreach (Animal animal in _animals)
-            //    {
-            //        if (animal.Species.ToLower() == "kat" + "hund")
-            //        {
-            //            _filteredAnimals.Add(animal);
-            //        }
-            //    }
-            //}
-            //else if (species == "kat" + "kanin")
-            //{
-            //    foreach (Animal animal in _animals)
-            //    {
-            //        if (animal.Species.ToLower() == "kat" + "kanin")
-            //        {
-            //            _filteredAnimals.Add(animal);
-            //        }
-            //    }
-            //}
-            //else if (species == "hund" + "kanin")
-            //{
-            //    foreach (Animal animal in _animals)
-            //    {
-            //        if (animal.Species.ToLower() == "hund" + "kanin")
-            //        {
-            //            _filteredAnimals.Add(animal);
-            //        }
-            //    }
-            //}
+            else if (species == "hundkat")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kat")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                    if (animal.Species.ToLower() == "hund")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
+            else if (species == "katkanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kat" )
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                    if (animal.Species.ToLower() == "kanin")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
+            else if (species == "hundkanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kanin")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                    if (animal.Species.ToLower() == "hund")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
             Debug.WriteLine("filter test species :" + species+ "test gender: " + gender);
             return _filteredAnimals;
         }
