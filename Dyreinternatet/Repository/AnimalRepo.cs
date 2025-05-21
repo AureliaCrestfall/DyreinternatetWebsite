@@ -59,7 +59,7 @@ namespace Dyreinternatet.Repository
             {
                 foreach (Animal animal in _animals)
                 {
-                    if (animal.Species == "hund")
+                    if (animal.Species.ToLower() == "hund")
                     {
                         AddFilteredAnimal(animal);
                     }
