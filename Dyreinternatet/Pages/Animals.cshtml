@@ -17,6 +17,16 @@
     <label>hund</label>
     <button type="submit">filter animals</button>>
 </form>
+<form method="post" asp-page-handler="Filter" name="Filtrer" id="Filtrer">
+    <input type="checkbox" asp-for="@Model.cat" name="cat" value="true" />
+    <label>kat</label>
+    <button type="submit">filter animals</button>>
+</form>
+<form method="post" asp-page-handler="Filter" name="Filtrer" id="Filtrer">
+    <input type="checkbox" asp-for="@Model.rabbit" name="rabbit" value="true" />
+    <label>kanin</label>
+    <button type="submit">filter animals</button>>
+</form>
 
 <div class="row row-cols-3">
     @foreach (var Animal in Model.Animals)

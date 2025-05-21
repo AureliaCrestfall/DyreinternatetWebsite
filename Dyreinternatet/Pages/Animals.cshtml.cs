@@ -18,6 +18,10 @@ namespace Dyreinternatet.Pages
         [BindProperty]
 
         public bool dog { set; get; }
+        [BindProperty]
+        public bool cat { set; get; }
+        [BindProperty]
+        public bool rabbit { set; get; }
         public string Species { get; set;}
         [BindProperty]
 
@@ -41,6 +45,14 @@ namespace Dyreinternatet.Pages
             if (dog == true)
             {
                 Species = "hund";
+            }
+            if (cat == true)
+            {
+                Species = "kat";
+            }
+            else if (rabbit == true)
+            {
+                Species = "kanin";
             }
             Animals = _animalS.Filter(Species, Gender);
             //FilteredAnimals = _animalS.GetAllFilteredAnimals();

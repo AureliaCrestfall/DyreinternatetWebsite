@@ -71,26 +71,26 @@ namespace Dyreinternatet.Repository
                     }
                 }
             }
-            //else if (species == "kanin")
-            //{
-            //    foreach (Animal animal in _animals)
-            //    {
-            //        if (animal.Species.ToLower() == "kanin")
-            //        {
-            //            _filteredAnimals.Add(animal);
-            //        }
-            //    }
-            //}
-            //else if (species == "kat")
-            //{
-            //    foreach (Animal animal in _animals)
-            //    {
-            //        if (animal.Species.ToLower() == "kat")
-            //        {
-            //            _filteredAnimals.Add(animal);
-            //        }
-            //    }
-            //}
+            else if (species == "kanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species == "kanin")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
+            else if (species == "kat")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species== "kat")
+                    {
+                        _filteredAnimals.Add(animal);
+                    }
+                }
+            }
             //else if (species == "kat" + "hund")
             //{
             //    foreach (Animal animal in _animals)
