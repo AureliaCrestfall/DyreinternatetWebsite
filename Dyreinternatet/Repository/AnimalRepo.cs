@@ -59,7 +59,7 @@ namespace Dyreinternatet.Repository
             {
                 foreach (Animal animal in _animals)
                 {
-                    if (animal.Species.ToLower() == "hund")
+                    if (animal.Species == "hund")
                     {
                         AddFilteredAnimal(animal);
                     }
@@ -80,6 +80,36 @@ namespace Dyreinternatet.Repository
                 foreach (Animal animal in _animals)
                 {
                     if (animal.Species.ToLower() == "kat")
+                    {
+                        AddFilteredAnimal(animal);
+                    }
+                }
+            }
+            else if (species == "kat" + "hund")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kat" + "hund")
+                    {
+                        AddFilteredAnimal(animal);
+                    }
+                }
+            }
+            else if (species == "kat" + "kanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "kat" + "kanin")
+                    {
+                        AddFilteredAnimal(animal);
+                    }
+                }
+            }
+            else if (species == "hund" + "kanin")
+            {
+                foreach (Animal animal in _animals)
+                {
+                    if (animal.Species.ToLower() == "hund" + "kanin")
                     {
                         AddFilteredAnimal(animal);
                     }
