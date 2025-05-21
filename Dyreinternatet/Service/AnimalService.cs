@@ -50,6 +50,7 @@ namespace Dyreinternatet.Service
             {
                 n++;
             }
+            Debug.WriteLine(n);
             while (swapped != false)
             {
 

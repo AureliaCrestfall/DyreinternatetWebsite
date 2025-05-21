@@ -33,8 +33,9 @@ namespace Dyreinternatet.Pages
         }
         public void OnPostSort()
         {
-            Debug.WriteLine("sort test");
-         _animalS.Sort(Animals);
+            List<Animal> sortanimals = _animalS.GetAll();
+            Debug.WriteLine("sort test" + sortanimals[2].Name);
+            Animals=_animalS.Sort(sortanimals);
          
         }
     }

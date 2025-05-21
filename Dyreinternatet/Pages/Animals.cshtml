@@ -8,8 +8,9 @@
 <h1 class="text-center">Dyr til adoption</h1>
 <p class="text-center">Se vores søde dyr til adoption her</p>
 
-<form method="post" asp-page-handler="sort" name="Sort" id="Sort">Klik her 
-    <a></a>
+<form method="post" asp-page-handler="Sort" name="Sort" id="Sort">
+    <input type="hidden" value="@Model.Animals" name="animals" />
+    <button type="submit">sort animals</button>>
 </form>
 
 <div class="row row-cols-3">
