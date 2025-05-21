@@ -24,13 +24,18 @@ namespace Dyreinternatet.Pages
             foreach(Animal animal in Animals)
             {
                 idceate++;
-                Debug.WriteLine(idceate);
             }
         }
         
        
         public void OnGet()
         {
+        }
+        public void OnPostSort()
+        {
+            Debug.WriteLine("sort test");
+         _animalS.Sort(Animals);
+         
         }
     }
 }
