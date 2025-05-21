@@ -12,6 +12,10 @@
     <input type="hidden" value="@Model.Animals" name="animals" />
     <button type="submit">sort animals</button>>
 </form>
+<form method="post" asp-page-handler="Filter" name="Filtrer" id="Filtrer">
+    <input type="checkbox" asp-for="@Model.FilteredAnimals" name="Hund" value="hund" />
+    <label>hund</label>
+</form>
 
 <div class="row row-cols-3">
     @foreach (var Animal in Model.Animals)
@@ -24,6 +28,7 @@
                </div>
          
     }
+
 </div>
 
 <p><a href="AnimalCreate?idceate=@Model.idceate">Klik her</a> for at tilføje flere dyr til internattet</p>
