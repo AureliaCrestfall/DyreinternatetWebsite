@@ -1,12 +1,13 @@
 ﻿using Dyreinternatet.Model;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 namespace Dyreinternatet.Repository
 {
     public class AnimalRepo:IAnimalRepo
     {
 
        private List<Animal> _animals;
-       private List<Animal> _filteredAnimals;
+       
         public AnimalRepo()
         {
             _animals = new List<Animal>();
@@ -23,19 +24,19 @@ namespace Dyreinternatet.Repository
         {
             return _animals;
         }
-        public List<Animal> GetAllFilteredAnimals()
-        {
-            return _filteredAnimals;
-        }
+        //public List<Animal> GetAllFilteredAnimals()
+        //{
+        //    return _filteredAnimals;
+        //}
 
         public void Add(Animal animals)
         {
             _animals.Add(animals);
         }
-        public void AddFilteredAnimal(Animal animal)
-        {
-            _filteredAnimals.Add(animal);
-        }
+        //public void AddFilteredAnimal(Animal animal)
+        //{
+        //    _filteredAnimals.Add(animal);
+        //}
 
         public void Remove(int chipNumber)
         {
@@ -55,9 +56,10 @@ namespace Dyreinternatet.Repository
             _animals.Add(new Animal(4, "kanin", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male", "Image\\madcat.jpg"));
         }
 
-        public void Filter(string species, string gender)
+        public List<Animal> Filter(string species, string gender)
         {
-            _filteredAnimals.Clear();
+             List<Animal> _filteredAnimals = new List<Animal>();
+           
 
             if (species == "hund")
             {
@@ -65,60 +67,62 @@ namespace Dyreinternatet.Repository
                 {
                     if (animal.Species == "hund")
                     {
-                        AddFilteredAnimal(animal);
+                        _filteredAnimals.Add(animal);
                     }
                 }
             }
-            else if (species == "kanin")
-            {
-                foreach (Animal animal in _animals)
-                {
-                    if (animal.Species.ToLower() == "kanin")
-                    {  
-                        AddFilteredAnimal(animal);
-                    }
-                }
-            }
-            else if (species == "kat")
-            {
-                foreach (Animal animal in _animals)
-                {
-                    if (animal.Species.ToLower() == "kat")
-                    {
-                        AddFilteredAnimal(animal);
-                    }
-                }
-            }
-            else if (species == "kat" + "hund")
-            {
-                foreach (Animal animal in _animals)
-                {
-                    if (animal.Species.ToLower() == "kat" + "hund")
-                    {
-                        AddFilteredAnimal(animal);
-                    }
-                }
-            }
-            else if (species == "kat" + "kanin")
-            {
-                foreach (Animal animal in _animals)
-                {
-                    if (animal.Species.ToLower() == "kat" + "kanin")
-                    {
-                        AddFilteredAnimal(animal);
-                    }
-                }
-            }
-            else if (species == "hund" + "kanin")
-            {
-                foreach (Animal animal in _animals)
-                {
-                    if (animal.Species.ToLower() == "hund" + "kanin")
-                    {
-                        AddFilteredAnimal(animal);
-                    }
-                }
-            }
+            //else if (species == "kanin")
+            //{
+            //    foreach (Animal animal in _animals)
+            //    {
+            //        if (animal.Species.ToLower() == "kanin")
+            //        {
+            //            _filteredAnimals.Add(animal);
+            //        }
+            //    }
+            //}
+            //else if (species == "kat")
+            //{
+            //    foreach (Animal animal in _animals)
+            //    {
+            //        if (animal.Species.ToLower() == "kat")
+            //        {
+            //            _filteredAnimals.Add(animal);
+            //        }
+            //    }
+            //}
+            //else if (species == "kat" + "hund")
+            //{
+            //    foreach (Animal animal in _animals)
+            //    {
+            //        if (animal.Species.ToLower() == "kat" + "hund")
+            //        {
+            //            _filteredAnimals.Add(animal);
+            //        }
+            //    }
+            //}
+            //else if (species == "kat" + "kanin")
+            //{
+            //    foreach (Animal animal in _animals)
+            //    {
+            //        if (animal.Species.ToLower() == "kat" + "kanin")
+            //        {
+            //            _filteredAnimals.Add(animal);
+            //        }
+            //    }
+            //}
+            //else if (species == "hund" + "kanin")
+            //{
+            //    foreach (Animal animal in _animals)
+            //    {
+            //        if (animal.Species.ToLower() == "hund" + "kanin")
+            //        {
+            //            _filteredAnimals.Add(animal);
+            //        }
+            //    }
+            //}
+            Debug.WriteLine("filter test species :" + species+ "test gender: " + gender);
+            return _filteredAnimals;
         }
     }
 }

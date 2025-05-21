@@ -10,9 +10,17 @@ namespace Dyreinternatet.Pages
     public class AnimalsModel : PageModel
     {
         private readonly AnimalService _animalS;
+        
         public  int idceate = 0;
+        [BindProperty]
+
         public List <Animal> FilteredAnimals {get; set;}
+        [BindProperty]
+
+        public bool dog { set; get; }
         public string Species { get; set;}
+        [BindProperty]
+
         public string Gender { get; set;}
 
 
@@ -21,7 +29,7 @@ namespace Dyreinternatet.Pages
         public AnimalsModel(AnimalService animalS)
         {
             Animals = animalS.GetAll();
-            FilteredAnimals = animalS.GetAllFilteredAnimals();
+            //FilteredAnimals = animalS.GetAllFilteredAnimals();
             _animalS = animalS;
             foreach(Animal animal in Animals)
             {
@@ -30,9 +38,13 @@ namespace Dyreinternatet.Pages
         }
         public void OnPostFilter()
         {
-            _animalS.Filter(Species, Gender);
-            FilteredAnimals = _animalS.GetAllFilteredAnimals();
-            Animals = _animalS.GetAll();
+            if (dog == true)
+            {
+                Species = "hund";
+            }
+            Animals = _animalS.Filter(Species, Gender);
+            //FilteredAnimals = _animalS.GetAllFilteredAnimals();
+            //Animals = _animalS.GetAllFilteredAnimals(); 
         }
        
         public void OnGet()

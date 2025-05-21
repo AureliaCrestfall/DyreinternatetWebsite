@@ -13,8 +13,9 @@
     <button type="submit">sort animals</button>>
 </form>
 <form method="post" asp-page-handler="Filter" name="Filtrer" id="Filtrer">
-    <input type="checkbox" asp-for="@Model.FilteredAnimals" name="Hund" value="hund" />
+    <input type="checkbox" asp-for="@Model.dog" name="dog" value="true" />
     <label>hund</label>
+    <button type="submit">filter animals</button>>
 </form>
 
 <div class="row row-cols-3">
@@ -23,7 +24,7 @@
                 <div class="card-body"> 
                      <h4 class="card-title">@Animal.Name</h4> 
                      <p class="card-text">Alder: @Animal.Age<br />Art: @Animal.Species</p>
-            <img src="@Animal.ImgPath" class="card-img-top" alt="animal Image">
+                     <img src="@Animal.ImgPath" class="card-img-top" alt="animal Image">
                      <a href="AnimalInfo?id=@Animal.ChipNumber" class="btn btn-primary">Se Mere</a> 
                </div>
          
