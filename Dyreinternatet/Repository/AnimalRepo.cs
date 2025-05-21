@@ -50,9 +50,9 @@ namespace Dyreinternatet.Repository
         {
             _animals.Add(new Animal(0));
             _animals.Add(new Animal(1));
-
-            _animals.Add(new Animal(2,"Buster er en kat", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male", "Image\\madcat.jpg"));
-
+            _animals.Add(new Animal(2,"kat", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male", "Image\\madcat.jpg"));
+            _animals.Add(new Animal(3, "hund", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male", "Image\\madcat.jpg"));
+            _animals.Add(new Animal(4, "kanin", "Buster", "Sødmis", 5, new DateTime(2012, 12, 25, 10, 30, 50), "Buster er sød", "male", "Image\\madcat.jpg"));
         }
 
         public void Filter(string species, string gender)

@@ -5,8 +5,10 @@ namespace Dyreinternatet.Repository
     {
 
         List<Animal> GetAll();
+        List<Animal> GetAllFilteredAnimals();
         void Add(Animal animals);
         void Remove(int chipNumber);
         void AddVisits(int chipNumber, string visits);
+        public void Filter(string species, string gender);
     }
 }
