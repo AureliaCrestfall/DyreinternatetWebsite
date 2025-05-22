@@ -35,7 +35,7 @@ namespace Dyreinternatet.Model
         {
             _title = "dyrenes dag";
             _content = "det er dyrenes dag";
-            _imagePath = "c/images";
+            _imagePath = "/Image/appol.jpg";
             _author = "dumbo";
         }
         public Blog(string title, string content, string imagePath, string author)
