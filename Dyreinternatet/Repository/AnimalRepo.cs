@@ -163,7 +163,7 @@ namespace Dyreinternatet.Repository
 
             foreach (Animal animal in _animals)
             {
-                if (animal.Name == shearchName)
+                if (animal.Name.ToLower() == shearchName.ToLower())
                 {
                     foundanimal.Add(animal);
                 }
