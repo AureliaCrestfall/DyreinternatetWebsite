@@ -10,6 +10,7 @@ namespace Dyreinternatet.Repository
         public CustomerRepo()
         {
             _customers = new List<Customer>();
+            seed();
         }
         //protected List<Customer> Customers
         //{
@@ -31,6 +32,10 @@ namespace Dyreinternatet.Repository
         {
             _customers.RemoveAt(phoneNumber);
         }
-
+        void seed()
+        { 
+            _customers.Add(new Customer("John Doe", "123456", "johndoe@gmail.com", "himmerlandsvej 69"));
+            _customers.Add(new Customer("Luka Magnotta", "123456", "IloveKittens@gmail.com", "Maglegårdsvej 17"));
+        }
     }
 }
