@@ -9,6 +9,10 @@ namespace Dyreinternatet.Service
 
         IBlogRepo _blogRepo;
 
+        public BlogService(IBlogRepo repo)
+        {
+            _blogRepo = repo;
+        }
         public void Add(Blog blog)
         {
             _blogRepo.Add(blog);

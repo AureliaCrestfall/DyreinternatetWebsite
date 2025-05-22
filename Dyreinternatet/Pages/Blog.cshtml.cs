@@ -9,7 +9,7 @@ namespace Dyreinternatet.Pages
     public class BlogModel : PageModel
     {
         private readonly BlogService _blogService;
-        public string titleCreate = string.Empty;
+        public string titleCreate = " ";
         [BindProperty]
         public List <Blog> Blogs { get; set; }
         public BlogModel (BlogService blogService)

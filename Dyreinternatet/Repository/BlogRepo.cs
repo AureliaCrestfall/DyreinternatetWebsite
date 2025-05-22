@@ -4,9 +4,14 @@ namespace Dyreinternatet.Repository
     public class BlogRepo:IBlogRepo
     {
 
-        List<Blog> _blogs;
+        private List<Blog> _blogs;
+        public BlogRepo()
+        {
+            _blogs = new List<Blog>();
+            seed();
+        }
 
-        protected List<Blog> Blogs
+        public List<Blog> Blogs
         {
             get { return _blogs; }
             set { _blogs = value; }
@@ -14,7 +19,7 @@ namespace Dyreinternatet.Repository
 
         public List<Blog> GetAll()
         {
-            return Blogs;
+            return _blogs;
         }
         public void Add(Blog blog)
         {
@@ -24,6 +29,10 @@ namespace Dyreinternatet.Repository
         public void Remove(int title)
         {
             Blogs.RemoveAt(title);
+        }
+        void seed()
+        {
+            _blogs.Add(new Blog());
         }
 
 
