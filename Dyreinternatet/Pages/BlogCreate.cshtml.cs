@@ -10,14 +10,22 @@ namespace Dyreinternatet.Pages
         private BlogService _blogSer;
         [BindProperty]
         public Blog Blog { get; set; }
+        [BindProperty]
+        public string TitleCreate {  get; set; }
 
         public BlogCreateModel(BlogService blogSer)
         {
             Blog = new Blog();
             _blogSer = blogSer;
         }
-        public void OnGet()
+        public void OnGet(string titleCreate)
         {
+            TitleCreate = titleCreate;
+        }
+        public IActionResult OnPost(string titleCreate)
+        {
+            Blog.Title = titleCreate;
+            return RedirectToPage("/Blog");
         }
     }
 }
