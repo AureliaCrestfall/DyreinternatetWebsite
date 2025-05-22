@@ -25,8 +25,9 @@ namespace Dyreinternatet.Pages
         public IActionResult OnPost(string titleCreate)
         {
             Blog.Title = titleCreate;
-            return RedirectToPage("/Blog");
             _blogSer.Add(Blog);
+
+            return RedirectToPage("/Blog");
         }
     }
 }
