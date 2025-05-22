@@ -17,10 +17,10 @@
                     <label for="inputComment">Skriv dit navn her: </label>
                     <input type="text" asp-for="Blog.Author" aria-describedby="textHelp" placeholder="Enter a comment">
 
-                    <form method="post" asp-for="Blog.Content">
+                     
                         <!--BLOG POST START-->
                         <label for="comment">Skriv et indlæg:</label>
-                        <textarea class="form-control" rows="4" id="comment" name="text"></textarea>
+                    <textarea asp-for="Blog.Content" class=" form-control" rows="4"></textarea>
                         <div class="mb-3">
                             <!--File upload-->
                             <label for="formFileMultiple" class="form-label"></label>
@@ -33,7 +33,6 @@
 @*                 <label for="inputComment">Skriv blog: </label>
                 <input type="text" rows="4" asp-for="Blog.Content" aria-describedby="textHelp" placeholder="Enter a comment"> *@
 @*                 <button type="submit" class="btn btn-primary mt-5">Submit</button> *@
-            </form>
             </<div>
             </div>
         </div>
