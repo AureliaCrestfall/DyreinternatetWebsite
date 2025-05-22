@@ -24,7 +24,8 @@ namespace Dyreinternatet.Pages
         }
         public IActionResult OnPost()
         {
-            
+            string folderlocation = "Image/";
+            Blog.ImagePath = _blogSer.rndimage(folderlocation);
             _blogSer.Add(Blog);
 
             return RedirectToPage("/Blog");

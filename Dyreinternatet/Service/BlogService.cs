@@ -8,7 +8,14 @@ namespace Dyreinternatet.Service
     {
 
         IBlogRepo _blogRepo;
+        Random rnd = new Random();
 
+        public string rndimage(string folder)
+        {
+            string[] paths = Directory.GetFiles(folder);
+            int rndint = rnd.Next(paths.Length);
+            return paths[rndint];
+        }
         public BlogService(IBlogRepo repo)
         {
             _blogRepo = repo;
