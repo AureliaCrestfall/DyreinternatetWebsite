@@ -84,7 +84,12 @@ namespace Dyreinternatet.Service
         {
             return _animalRepo.sherch(shearchName);
         }
-             
+        public void Edit(int place, Animal editanimal)
+        {
+            _animalRepo.Edit(place, editanimal);
+        }
+
+
 
     }
 }

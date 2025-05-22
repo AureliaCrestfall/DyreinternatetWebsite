@@ -1,0 +1,43 @@
+﻿@page
+@model Dyreinternatet.Pages.AnimalEditModel
+@{
+}
+<body>
+    <container-sm>
+        <div class="text-center">
+            <h1>edit info om søde </h1>
+            
+            <form method="post">
+                <div class="form-group container-fluid">
+                    <label for="inputDateTime">Startid: </label>
+                    <input type="datetime-local" asp-for="Animal.TimeAtShelter" aria-describedby="dateTimeHelp" placeholder="Enter Date/Time" value="@Model.Animals[Model.idinfo].TimeAtShelter.Date" >
+
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="inputComment">Skriv Species her: </label>
+                    <input type="text" asp-for="Animal.Species" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].Species">
+
+                    <label for="inputComment">Skriv Name her: </label>
+                    <input type="text" asp-for="Animal.Name" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].Name">
+
+                    <label for="inputComment">Skriv race her: </label>
+                    <input type="text" asp-for="Animal.race" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].race">
+
+                    <label for="inputComment">Skriv age her: </label>
+                    <input type="number" asp-for="Animal.Age" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].Age">
+
+                    <label for="inputComment">Skriv Description her: </label>
+                    <input type="text" asp-for="Animal.Description" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].Description">
+
+                    <label for="inputComment">Skriv Gender her: </label>
+                    <input type="text" asp-for="Animal.Gender" aria-describedby="textHelp" placeholder="Enter a comment" value="@Model.Animals[Model.idinfo].Gender">
+
+                </div>
+                <input type="hidden" asp-for="Animal.ChipNumber" value="@Model.idinfo" name="idinfo" />
+                <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </form>
+
+        </div>
+    </container-sm>
+</body>

@@ -178,6 +178,14 @@ namespace Dyreinternatet.Repository
             {
                 return _animals;
             }
+           
+
+        }
+        public void Edit(int place, Animal editanimal)
+        {
+            editanimal.ImgPath = _animals[place].ImgPath;
+            editanimal.TimeAtShelter = _animals[place].TimeAtShelter;
+            _animals[place] = editanimal;
         }
     }
 }
