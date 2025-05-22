@@ -26,6 +26,7 @@ namespace Dyreinternatet.Pages
         {
             Blog.Title = titleCreate;
             return RedirectToPage("/Blog");
+            _blogSer.Add(Blog);
         }
     }
 }
