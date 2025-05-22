@@ -34,6 +34,7 @@ namespace Dyreinternatet.Repository
         void seed()
         {
             _workers.Add(new Worker("John Doe", 0, "123456", "johndoe@gmail.com", "Dyrlæge"));
+            _workers.Add(new Worker("Kim Kardashian", 2, "123456", "KimK@gmail.com", "Frivillig"));
         }
     }
 }
