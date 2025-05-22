@@ -16,7 +16,7 @@ namespace Dyreinternatet.Pages
 
         public List <Animal> FilteredAnimals {get; set;}
         [BindProperty]
-
+        public string searchname { set; get; }
         public bool dog { set; get; }
         [BindProperty]
         public bool cat { set; get; }
@@ -76,7 +76,10 @@ namespace Dyreinternatet.Pages
             //FilteredAnimals = _animalS.GetAllFilteredAnimals();
             //Animals = _animalS.GetAllFilteredAnimals(); 
         }
-       
+       public void OnPostSearch()
+        {
+            Animals = _animalS.sherch(searchname);
+        }
         public void OnGet()
         {
         }

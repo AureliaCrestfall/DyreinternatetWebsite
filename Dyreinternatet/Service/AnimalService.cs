@@ -80,6 +80,12 @@ namespace Dyreinternatet.Service
             return bubble;
         }
 
+        public List<Animal> sherch(string shearchName)
+        {
+            return _animalRepo.sherch(shearchName);
+        }
+             
+
     }
 }
 

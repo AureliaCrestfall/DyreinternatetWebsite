@@ -8,6 +8,10 @@
 <h1 class="text-center">Dyr til adoption</h1>
 <p class="text-center">Se vores søde dyr til adoption her</p>
 
+<form method="post" asp-page-handler="search" name="search" id="search">
+    <input type="text" asp-for="searchname" aria-describedby="textHelp" placeholder="søg efter et dyrs navn" />
+    <button type="submit">søg animals</button>
+</form>
 <form method="post" asp-page-handler="Sort" name="Sort" id="Sort">
     <input type="hidden" value="@Model.Animals" name="animals" />
     <button type="submit">sort animals</button>

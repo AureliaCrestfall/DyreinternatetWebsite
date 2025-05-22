@@ -9,6 +9,7 @@ namespace Dyreinternatet.Repository
         void Add(Animal animals);
         void Remove(int chipNumber);
         void AddVisits(int chipNumber, string visits);
-        public List<Animal> Filter(string species, string gender);
+         List<Animal> Filter(string species, string gender);
+        List<Animal> sherch(string shearchName);
     }
 }

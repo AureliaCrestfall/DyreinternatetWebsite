@@ -156,5 +156,28 @@ namespace Dyreinternatet.Repository
             Debug.WriteLine("filter test species :" + species+ "test gender: " + gender);
             return _filteredAnimals;
         }
+        public List<Animal> sherch(string shearchName)
+        {
+
+            List<Animal> foundanimal = new List<Animal>();
+
+            foreach (Animal animal in _animals)
+            {
+                if (animal.Name == shearchName)
+                {
+                    foundanimal.Add(animal);
+                }
+            }
+
+
+            if (foundanimal != null)
+            {
+                return foundanimal;
+            }
+            else
+            {
+                return _animals;
+            }
+        }
     }
 }
