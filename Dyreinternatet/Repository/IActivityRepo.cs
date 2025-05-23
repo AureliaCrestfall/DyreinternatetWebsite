@@ -7,7 +7,8 @@ namespace Dyreinternatet.Repository
         List<Activity> GetAll();
         void Add(Activity activity);
         void Remove(int title);
-      
+
+        void AddJoiners(int title, string joiners);
 
     }
 }

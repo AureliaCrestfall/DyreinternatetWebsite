@@ -7,6 +7,7 @@
         string _imagePath;
         string _author;
         string _location;
+        List<string> _joiners;
         public  string Title
             {
             get { return _title; }
@@ -32,6 +33,12 @@
             get { return _location; }
             set { _location = value; }
         }
+        public List<string> joiners
+        {
+            get { return _joiners; }
+            set { _joiners = value; }
+        }
+
 
         public Activity()
         {
@@ -40,7 +47,7 @@
             _imagePath = "/Image/madcat.jpg";
             _author = "dyrinternated";
             _location = "roskilde";
-
+            _joiners = new List<string>();
         }
         public Activity(string title,string content,string imagePath,string author, string location):this()
         {

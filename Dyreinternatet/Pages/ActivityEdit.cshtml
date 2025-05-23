@@ -2,3 +2,40 @@
 @model Dyreinternatet.Pages.ActivityEditModel
 @{
 }
+<container-sm>
+    <div class="text-center">
+        <h1>Skriv blogindlæg</h1>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <form method="post">
+                <div class="form-group mt-2">
+                    <label for="inputComment">Titel: </label>
+                    <input type="text" asp-for="Activity.Title" value="@Model.Activities[Model.idinfo].Title" aria-describedby="textHelp" placeholder="Skriv titlen her">
+                    <label for="inputComment">Skriv dit navn her: </label>
+                    <input type="text" asp-for="Activity.Author" value="@Model.Activities[Model.idinfo].Author" aria-describedby="textHelp" placeholder="Enter a comment">
+
+
+                    <!--BLOG POST START-->
+                    <label for="comment">Skriv et indlæg:</label>
+                    <textarea asp-for="Activity.Content" value="@Model.Activities[Model.idinfo].Content" class=" form-control" rows="4"></textarea>
+                    <div class="mb-3">
+                        <!--File upload-->
+                        <label for="formFileMultiple" class="form-label"></label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple style="width: 200px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Indsend</button> <!--Submit button-->
+            </form> <!--BLOG POST END-->
+        </div>
+        @*                 <label for="inputComment">Skriv blog: </label>
+                <input type="text" rows="4" asp-for="Blog.Content" aria-describedby="textHelp" placeholder="Enter a comment"> *@
+        @*                 <button type="submit" class="btn btn-primary mt-5">Submit</button> *@
+        </<div>
+        </div>
+    </div>
+    </div>
+</container-sm>
+<body>
+
+</body>
