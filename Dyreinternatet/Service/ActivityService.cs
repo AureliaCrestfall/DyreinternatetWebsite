@@ -7,6 +7,10 @@ namespace Dyreinternatet.Service
     {
 
         IActivityRepo _activityRepo;
+        public ActivityService(IActivityRepo activityRepo)
+        {
+            _activityRepo = activityRepo;
+        }
 
         public void Add(Activity activity)
         {

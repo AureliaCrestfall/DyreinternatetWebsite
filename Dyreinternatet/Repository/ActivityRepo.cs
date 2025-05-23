@@ -9,6 +9,7 @@ namespace Dyreinternatet.Repository
         public ActivityRepo()
         {
             _activities = new List<Activity>();
+            _activities.Add(new Activity());
         }
         //protected List<Activity> Activities
         //{

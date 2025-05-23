@@ -9,12 +9,12 @@
 <p class="text-center">Se hvad der sker på internattet her</p>
 
 <div class="row row-cols-1">
-    @foreach (var Activity in Model.Activity)
+    @foreach (var Activity in Model.Activities)
     {
         <div class="card-body">
             <h4 class="card-title">@Activity.Title</h4>
             <p class="card-text"> @Activity.Content<br />Skrevet af: @Activity.Author</p>
-            <img src="@Activity.ImagePath" class="card-img-top" alt="Activity Image">
+            <img src="@Activity.imagePath" class="card-img-top" alt="Activity Image">
             <a href="ActivityEdit" class="btn btn-primary">Rediger</a>
         </div>
     }
