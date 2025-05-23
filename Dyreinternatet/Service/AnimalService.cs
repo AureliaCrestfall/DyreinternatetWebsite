@@ -49,25 +49,25 @@ namespace Dyreinternatet.Service
             return _animalRepo.Filter(species, gender);
         }
 
-       public List<Animal> Sort(List<Animal> bubble)
+       public List<Animal> Sort()
         {
             
             
             
-            return _animalRepo.Sort(bubble);
+            return _animalRepo.Sort();
         }
 
         public List<Animal> sherch(string shearchName)
         {
-            try
-            {
+            //try
+            //{
                 return _animalRepo.sherch(shearchName);
 
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    throw new Exception(ex.ToString());
+            //}
 
         }
         public void Edit(int place, Animal editanimal)

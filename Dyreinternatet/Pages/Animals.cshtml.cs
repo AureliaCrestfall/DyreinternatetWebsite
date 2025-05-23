@@ -79,23 +79,22 @@ namespace Dyreinternatet.Pages
         }
        public void OnPostSearch()
         {
-            try
-            {
+            //try
+            //{
                 Animals = _animalS.sherch(searchname);
-            }
-            catch(Exception ex)
-            {
-                Debug.WriteLine("no animals");
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    Debug.WriteLine("no animals");
+            //}
         }
         public void OnGet()
         {
         }
         public void OnPostSort()
         {
-            List<Animal> sortanimals = _animalS.GetAll();
-            Debug.WriteLine("sort test" + sortanimals[2].Name);
-            Animals=_animalS.Sort(sortanimals);
+           
+            Animals=_animalS.Sort();
          
         }
         public IActionResult OnPostDeleteAnimal(int ID)
