@@ -41,6 +41,18 @@ namespace Dyreinternatet.Repository
         public void Remove(int chipNumber)
         {
             _animals.RemoveAt(chipNumber);
+            int n = 0;
+
+            foreach (Animal animal in _animals)
+            {
+                n++;
+            }
+
+
+            for (int i = 0;i< n; i++)
+            {
+                _animals[i].ID = i;
+            }
         }
 
         public void AddVisits(int chipNumber, string visits)
