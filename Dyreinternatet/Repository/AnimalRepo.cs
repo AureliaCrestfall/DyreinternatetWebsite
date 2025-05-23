@@ -29,18 +29,26 @@ namespace Dyreinternatet.Repository
 
         public void Remove(int chipNumber)
         {
-            _animals.RemoveAt(chipNumber);
-            int n = 0;
-
-            foreach (Animal animal in _animals)
+            try
             {
-                n++;
-            }
+               
+                _animals.RemoveAt(chipNumber);
+                int n = 0;
+
+                foreach (Animal animal in _animals)
+                {
+                    n++;
+                }
 
 
             for (int i = 0;i< n; i++)
+                {
+                    _animals[i].ID = i;
+                }
+            }
+            catch(ArgumentOutOfRangeException ex)
             {
-                _animals[i].ID = i;
+                throw new ArgumentOutOfRangeException(ex.Message);
             }
         }
 

@@ -29,7 +29,14 @@ namespace Dyreinternatet.Service
         }
         public void Remove(int chipNumber)
         {
-            _animalRepo.Remove(chipNumber);
+            try
+            {
+                _animalRepo.Remove(chipNumber);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
         public List<Animal> GetAll()
         {
