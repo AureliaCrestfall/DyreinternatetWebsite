@@ -35,10 +35,7 @@ namespace Dyreinternatet.Service
         {
             return _animalRepo.GetAll();
         }
-        //public List<Animal> GetAllFilteredAnimals()
-        //{
-        //    return _animalRepo.GetAllFilteredAnimals();
-        //}
+      
 
         public void AddVisits(int chipNumber, string visits)
         {
@@ -59,15 +56,10 @@ namespace Dyreinternatet.Service
 
         public List<Animal> sherch(string shearchName)
         {
-            //try
-            //{
+            
                 return _animalRepo.sherch(shearchName);
 
-            //}
-            //catch(Exception ex)
-            //{
-            //    throw new Exception(ex.ToString());
-            //}
+            
 
         }
         public void Edit(int place, Animal editanimal)

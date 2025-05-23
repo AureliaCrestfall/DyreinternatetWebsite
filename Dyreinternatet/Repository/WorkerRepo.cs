@@ -11,11 +11,7 @@ namespace Dyreinternatet.Repository
             _workers = new List<Worker>();
             seed();
         }
-        //public List<Worker> Workers
-        //{
-        //    get { return _workers; }
-        //    set { _workers = value; }
-        //}
+        
 
         public List<Worker> GetAll()
         {

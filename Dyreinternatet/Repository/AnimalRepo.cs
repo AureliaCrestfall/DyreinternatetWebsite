@@ -12,31 +12,20 @@ namespace Dyreinternatet.Repository
         {
             _animals = new List<Animal>();
             seed();
-            //_animals.Add(new Animal());
         }
-        //public List<Animal> Animals
-        //{
-        //    get { return _animals; }
-        //    set { _animals = value; }
-        //}
+        
 
         public List<Animal> GetAll()
         {
             return _animals;
         }
-        //public List<Animal> GetAllFilteredAnimals()
-        //{
-        //    return _filteredAnimals;
-        //}
+
 
         public void Add(Animal animals)
         {
             _animals.Add(animals);
         }
-        //public void AddFilteredAnimal(Animal animal)
-        //{
-        //    _filteredAnimals.Add(animal);
-        //}
+        
 
         public void Remove(int chipNumber)
         {
@@ -175,12 +164,11 @@ namespace Dyreinternatet.Repository
             bool found = false;
          
 
-            try
+            if(shearchName == null)
             {
-                //if (shearchName == null)
-                //{
-                //    shearchName = "";
-                //}
+                shearchName = "";
+            }
+                
                 foreach (Animal animal in _animals)
                 {
 
@@ -207,11 +195,7 @@ namespace Dyreinternatet.Repository
                     return _animals;
 
                 }
-            }
-            catch(NullReferenceException ex)
-            {
-                throw new Exception("sherch keuy is empty");
-            }
+            
 
         }
 
