@@ -15,6 +15,7 @@
             <h4 class="card-title">@Blog.Title</h4>
             <p class="card-text"> @Blog.Content<br />Skrevet af: @Blog.Author</p>
             <img src="@Blog.ImagePath" class="card-img-top" alt="Blog Image">
+            <a href="BlogEdit?id=@Blog.ID" class="btn btn-primary">Edit Blog</a>
         </div>
 }
     <p><a href="BlogCreate?titleCreate=@Model.titleCreate">Klik her</a> for at skrive et blogindlæg</p>

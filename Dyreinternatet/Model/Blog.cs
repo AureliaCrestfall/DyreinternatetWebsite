@@ -8,6 +8,7 @@ namespace Dyreinternatet.Model
         string _content;
         string _imagePath;
         string _author;
+        int _id;
 
         public string Title
         {
@@ -30,6 +31,11 @@ namespace Dyreinternatet.Model
         {
             get { return _author; }
             set { _author = value; }
+        }
+        public int ID
+        {
+            get { return _id; }
+            set { _id = value; }
         }
         public Blog()
         {

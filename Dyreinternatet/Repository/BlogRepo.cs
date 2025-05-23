@@ -34,7 +34,11 @@ namespace Dyreinternatet.Repository
         {
             _blogs.Add(new Blog());
         }
-
+        public void Edit(int place, Blog editblog)
+        {
+            editblog.ImagePath = _blogs[place].ImagePath;
+            _blogs[place] = editblog;
+        }
 
     }
 }
