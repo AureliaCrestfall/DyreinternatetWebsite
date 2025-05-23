@@ -12,7 +12,6 @@ namespace Dyreinternatet.Model
         string _race;
         public  enum Genderenum {Male,Female,Unknown};
         DateTime _timeAtShelter;
-        string[] _statuses;
         List<string> _visits;
         string _description;
         Genderenum _gender;
@@ -65,11 +64,7 @@ namespace Dyreinternatet.Model
             set {
                 _timeAtShelter = value;}
         }
-        public string[] Statuses
-        {
-            get { return _statuses; }
-            set { _statuses = value; }
-        }
+        
         public List<string> Visits
         {
             get { return _visits; }
@@ -90,7 +85,6 @@ namespace Dyreinternatet.Model
             _race = "bunny";
             _timeAtShelter = DateTime.Now.Date.AddHours(DateTime.Now.Hour);
             _visits = new List<string>();
-            //_statuses = new string[]();
             _description = "this is a bunny";
         }
         public Animal(int chip) : this()
@@ -103,7 +97,6 @@ namespace Dyreinternatet.Model
             _race = "bunny";
             _timeAtShelter = DateTime.Now;
             _visits = new List<string>();
-            //_statuses = new string[]();
             _description = "this is a bunny";
             _id = _chipNumber;
 

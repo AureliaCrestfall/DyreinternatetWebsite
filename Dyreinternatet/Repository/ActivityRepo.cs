@@ -11,11 +11,7 @@ namespace Dyreinternatet.Repository
             _activities = new List<Activity>();
             _activities.Add(new Activity());
         }
-        //protected List<Activity> Activities
-        //{
-        //    get { return _activities; }
-        //    set { _activities = value; }
-        //}
+
 
         public List<Activity> GetAll()
         {

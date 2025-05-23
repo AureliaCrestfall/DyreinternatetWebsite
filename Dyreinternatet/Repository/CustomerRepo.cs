@@ -12,11 +12,7 @@ namespace Dyreinternatet.Repository
             _customers = new List<Customer>();
             seed();
         }
-        //protected List<Customer> Customers
-        //{
-        //    get { return _customers; }
-        //    set { _customers = value; }
-        //}
+       
 
         public List<Customer> GetAll()
         {
