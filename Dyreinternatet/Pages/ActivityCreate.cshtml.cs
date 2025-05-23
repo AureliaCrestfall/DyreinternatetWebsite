@@ -7,7 +7,7 @@ namespace Dyreinternatet.Pages
 {
     public class ActivityCreateModel : PageModel
     {
-        private BlogService _activityService;
+        private ActivityService _activityService;
         [BindProperty]
         public Activity Activity { get; set; }
         [BindProperty]
@@ -15,7 +15,7 @@ namespace Dyreinternatet.Pages
 
         public ActivityCreateModel(ActivityService activityService)
         {
-            Activity = new Activity();
+            Activity = new Model.Activity();
             _activityService = activityService;
         }
         public void OnGet(string titleCreate)
@@ -25,7 +25,7 @@ namespace Dyreinternatet.Pages
         public IActionResult OnPost()
         {
             string folderlocation = "Image/";
-            Activity.ImagePath = _activityService.rndimage(folderlocation);
+            //Activity.ImagePath = _activityService.rndimage(folderlocation);
             _activityService.Add(Activity);
 
             return RedirectToPage("/Activity");
