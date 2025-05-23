@@ -165,7 +165,6 @@ namespace Dyreinternatet.Repository
             }
 
 
-            Debug.WriteLine("filter test species :" + species+ "test gender: " + gender);
             return _filteredAnimals;
         }
         public List<Animal> sherch(string shearchName)
@@ -173,31 +172,89 @@ namespace Dyreinternatet.Repository
 
             List<Animal> foundanimal = new List<Animal>();
 
-            foreach (Animal animal in _animals)
+            bool found = false;
+
+            try
             {
-                if (animal.Name.ToLower() == shearchName.ToLower())
+                foreach (Animal animal in _animals)
                 {
-                    foundanimal.Add(animal);
+
+
+                    if (animal.Name.ToLower() == shearchName.ToLower())
+                    {
+                        Debug.WriteLine(found);
+                        foundanimal.Add(animal);
+                        found = true;
+                    }
+                    else
+                    {
+                        Debug.WriteLine("chach test");
+
+                    }
+
+
+
+
+                }
+
+                if (found == true)
+                {
+                    return foundanimal;
+
+                }
+                else
+                {
+                    return _animals;
+
                 }
             }
-
-
-            if (foundanimal != null)
+            catch(NullReferenceException ex)
             {
-                return foundanimal;
+                throw new Exception("sherch keuy is empty");
             }
-            else
-            {
-                return _animals;
-            }
-           
 
         }
+
+
+
         public void Edit(int place, Animal editanimal)
         {
             editanimal.ImgPath = _animals[place].ImgPath;
             editanimal.TimeAtShelter = _animals[place].TimeAtShelter;
             _animals[place] = editanimal;
         }
+
+        public List<Animal> Sort(List<Animal> bubble)
+        {
+
+            bool swapped = true;
+            int n = 0;
+            foreach (Animal animal in bubble)
+            {
+                n++;
+            }
+            while (swapped != false)
+            {
+
+                swapped = false;
+                for (int i = 0; i < n - 1; i++)
+                {
+                    if (bubble[i].Age > bubble[i + 1].Age)
+                    {
+                        (bubble[i], bubble[i + 1]) = (bubble[i + 1], bubble[i]);
+
+                        swapped = true;
+                    }
+                }
+            }
+            for (int i = 0; i < n; i++)
+            {
+                bubble[i].ID = i;
+            }
+
+            return bubble;
+        }
+
+
     }
 }

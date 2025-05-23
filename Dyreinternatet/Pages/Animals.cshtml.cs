@@ -79,7 +79,14 @@ namespace Dyreinternatet.Pages
         }
        public void OnPostSearch()
         {
-            Animals = _animalS.sherch(searchname);
+            try
+            {
+                Animals = _animalS.sherch(searchname);
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("no animals");
+            }
         }
         public void OnGet()
         {
