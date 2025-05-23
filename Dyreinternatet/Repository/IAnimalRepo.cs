@@ -12,6 +12,6 @@ namespace Dyreinternatet.Repository
         List<Animal> Filter(string species, string gender);
         List<Animal> sherch(string shearchName);
         void Edit(int place, Animal editanimal);
-        List<Animal> Sort(List<Animal> bubble);
+        List<Animal> Sort();
     }
 }

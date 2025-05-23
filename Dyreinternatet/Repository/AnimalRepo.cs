@@ -224,12 +224,12 @@ namespace Dyreinternatet.Repository
             _animals[place] = editanimal;
         }
 
-        public List<Animal> Sort(List<Animal> bubble)
+        public List<Animal> Sort()
         {
-
+            List<Animal> sortList = new List<Animal>(_animals);
             bool swapped = true;
             int n = 0;
-            foreach (Animal animal in bubble)
+            foreach (Animal animal in sortList)
             {
                 n++;
             }
@@ -239,9 +239,9 @@ namespace Dyreinternatet.Repository
                 swapped = false;
                 for (int i = 0; i < n - 1; i++)
                 {
-                    if (bubble[i].Age > bubble[i + 1].Age)
+                    if (sortList[i].Age > sortList[i + 1].Age)
                     {
-                        (bubble[i], bubble[i + 1]) = (bubble[i + 1], bubble[i]);
+                        (sortList[i], sortList[i + 1]) = (sortList[i + 1], sortList[i]);
 
                         swapped = true;
                     }
@@ -249,10 +249,10 @@ namespace Dyreinternatet.Repository
             }
             for (int i = 0; i < n; i++)
             {
-                bubble[i].ID = i;
+                sortList[i].ID = i;
             }
 
-            return bubble;
+            return sortList;
         }
 
 
