@@ -173,24 +173,24 @@ namespace Dyreinternatet.Repository
             List<Animal> foundanimal = new List<Animal>();
 
             bool found = false;
+         
 
             try
             {
+                //if (shearchName == null)
+                //{
+                //    shearchName = "";
+                //}
                 foreach (Animal animal in _animals)
                 {
 
 
                     if (animal.Name.ToLower() == shearchName.ToLower())
                     {
-                        Debug.WriteLine(found);
                         foundanimal.Add(animal);
                         found = true;
                     }
-                    else
-                    {
-                        Debug.WriteLine("chach test");
-
-                    }
+                   
 
 
 
