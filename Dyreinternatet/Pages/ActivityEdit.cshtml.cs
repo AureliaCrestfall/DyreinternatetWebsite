@@ -14,18 +14,18 @@ namespace Dyreinternatet.Pages
         private readonly ActivityService _activityService;
         [BindProperty]
 
-        public Activity Activity { set; get; }
+        public Model.Activity Activity { set; get; }
 
 
 
 
         [BindProperty]
-        public List<Activity> Activities { set; get; }
+        public List<Model.Activity> Activities { set; get; }
 
         public ActivityEditModel(ActivityService activityService)
         {
             Activities = activityService.GetAll();
-            Activity = new Activity();
+            Activity = new Model.Activity();
             _activityService = activityService;
         }
         public void OnGet(int id)
@@ -35,6 +35,8 @@ namespace Dyreinternatet.Pages
         }
         public IActionResult OnPost(int idinfo)
         {
+
+            Debug.WriteLine(idinfo + "testy" + Activity.Title);
             //Blog.ImagePath = Blogs[idinfo].ImagePath;
             _activityService.Edit(idinfo, Activity);
 

@@ -9,6 +9,6 @@ namespace Dyreinternatet.Repository
         void Remove(int title);
 
         void AddJoiners(int title, string joiners);
-
+        void Edit(int place, Activity editActivity);
     }
 }

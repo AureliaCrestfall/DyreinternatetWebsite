@@ -1,7 +1,7 @@
 ﻿using Dyreinternatet.Model;
 namespace Dyreinternatet.Repository
 {
-    public class ActivityRepo:IActivityRepo
+    public class ActivityRepo : IActivityRepo
     {
         
         List<Activity> _activities;
@@ -35,6 +35,11 @@ namespace Dyreinternatet.Repository
         {
             _activities[title].joiners.Add(joiners);
         }
-
+        public void Edit(int title, Model.Activity editactivity)
+        {
+            editactivity = _activities[title];
+            _activities[title] = editactivity;
+            
+        }
     }
 }

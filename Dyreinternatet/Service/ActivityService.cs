@@ -28,5 +28,9 @@ namespace Dyreinternatet.Service
         {
             _activityRepo.AddJoiners(title, joiners);
         }
+        public void Edit(int place, Model.Activity editActivity)
+        {
+            _activityRepo.Edit(place, editActivity);
+        }
     }
 }
