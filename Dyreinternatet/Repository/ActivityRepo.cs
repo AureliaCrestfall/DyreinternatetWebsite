@@ -6,25 +6,29 @@ namespace Dyreinternatet.Repository
         
         List<Activity> _activities;
 
-        protected List<Activity> Activities
+        public ActivityRepo()
         {
-            get { return _activities; }
-            set { _activities = value; }
+            _activities = new List<Activity>();
         }
+        //protected List<Activity> Activities
+        //{
+        //    get { return _activities; }
+        //    set { _activities = value; }
+        //}
 
         public List<Activity> GetAll()
         {
-            return Activities;
+            return _activities;
         }
 
         public void Add(Activity activity)
         {
-            Activities.Add(activity);
+            _activities.Add(activity);
         }
 
         public void Remove(int title)
         {
-            Activities.RemoveAt(title); 
+            _activities.RemoveAt(title); 
         }
 
        

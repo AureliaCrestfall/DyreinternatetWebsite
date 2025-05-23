@@ -32,5 +32,9 @@ namespace Dyreinternatet.Service
         {
             return _blogRepo.GetAll();
         }
+        public void Edit(int place, Blog editblog)
+        {
+            _blogRepo.Edit(place, editblog);
+        }
     }
 }
