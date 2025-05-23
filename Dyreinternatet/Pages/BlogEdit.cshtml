@@ -13,14 +13,14 @@
             <form method="post">
                 <div class="form-group mt-2">
                     <label for="inputComment">Titel: </label>
-                    <input type="text" asp-for="Blog.Title" value="Blog.Title[idinfo]" aria-describedby="textHelp" placeholder="Skriv titlen her">
+                    <input type="text" asp-for="Blog.Title" value="@Model.Blogs[Model.idinfo].Title" aria-describedby="textHelp" placeholder="Skriv titlen her">
                     <label for="inputComment">Skriv dit navn her: </label>
-                    <input type="text" asp-for="Blog.Author" value="Blog.Author[idinfo]" aria-describedby="textHelp" placeholder="Enter a comment">
+                    <input type="text" asp-for="Blog.Author" value="@Model.Blogs[Model.idinfo].Author" aria-describedby="textHelp" placeholder="Enter a comment">
 
 
                     <!--BLOG POST START-->
                     <label for="comment">Skriv et indlæg:</label>
-                    <textarea asp-for="Blog.Content" value="Blog.Content[idinfo]" class=" form-control" rows="4"></textarea>
+                    <textarea asp-for="Blog.Content" value="@Model.Blogs[Model.idinfo].Content" class=" form-control" rows="4"></textarea>
                     <div class="mb-3">
                         <!--File upload-->
                         <label for="formFileMultiple" class="form-label"></label>
