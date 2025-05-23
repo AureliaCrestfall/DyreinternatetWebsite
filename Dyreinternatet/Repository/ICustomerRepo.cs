@@ -7,5 +7,7 @@ namespace Dyreinternatet.Repository
         List<Customer> GetAll();
         void Add(Customer customer);
         void Remove(int phoneNumber);
+        void Edit(int place, Customer editCustomer);
+
     }
 }

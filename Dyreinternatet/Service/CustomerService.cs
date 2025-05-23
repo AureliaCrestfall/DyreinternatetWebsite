@@ -22,6 +22,9 @@ namespace Dyreinternatet.Service
         {
             return _customerRepo.GetAll();
         }
-
+        public void Edit(int place, Customer editCustomer)
+        {
+            _customerRepo.Edit(place, editCustomer);
+        }
     }
 }
