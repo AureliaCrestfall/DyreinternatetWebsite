@@ -2,3 +2,14 @@
 @model Dyreinternatet.Pages.AnimalBookingModel
 @{
 }
+<form method="post">
+    <div class="form-group mt-2">
+        
+
+
+        <label for="visit">Skriv en booking:</label>
+        <textarea asp-for="@Model.Animal.ImgPath" class=" form-control" rows="4"></textarea>
+        <input type="hidden" value="@Model.idbook" name="idbook" />
+
+        <button type="submit" class="btn btn-primary">Indsend</button> 
+</form> 

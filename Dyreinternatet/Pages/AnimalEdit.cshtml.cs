@@ -34,7 +34,6 @@ namespace Dyreinternatet.Pages
         }
         public IActionResult OnPost(int idinfo)
         {
-            //Animal.ImgPath = Animals[idinfo].ImgPath;
             _animalS.Edit(idinfo,Animal);
 
             return RedirectToPage("/Animals");
