@@ -24,6 +24,9 @@ namespace Dyreinternatet.Service
         {
             return _activityRepo.GetAll();
         }
-
+        public void AddJoiners(int title,string joiners)
+        {
+            _activityRepo.AddJoiners(title, joiners);
+        }
     }
 }

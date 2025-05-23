@@ -31,7 +31,10 @@ namespace Dyreinternatet.Repository
         {
             _activities.RemoveAt(title); 
         }
+        public void AddJoiners(int title, string joiners)
+        {
+            _activities[title].joiners.Add(joiners);
+        }
 
-       
     }
 }
