@@ -37,7 +37,7 @@
         {
             _title = "test";
             _content = "nijgrniognrgoinrgnoirgniornoigrgnoi";
-            _imagePath = "/image0.jpg";
+            _imagePath = "/Image/madcat.jpg";
             _author = "dyrinternated";
             _location = "roskilde";
 

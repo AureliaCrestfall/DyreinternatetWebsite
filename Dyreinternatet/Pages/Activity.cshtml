@@ -3,13 +3,13 @@
 @{
 }
 <link href="~/css/stylesheet.css" rel="stylesheet" />
-
+<html>
 <!DOCTYPE html>
 <h1 class="text-center">Roskilde Internats begivenheder</h1>
 <p class="text-center">Se hvad der sker på internattet her</p>
-@* <html>
+
 <div class="row row-cols-1">
-    @foreach (var Activity in Model.Activities)
+    @foreach (var Activity in Model.Activity)
     {
         <div class="card-body">
             <h4 class="card-title">@Activity.Title</h4>
@@ -19,4 +19,4 @@
         </div>
     }
     <p><a href="ActivityCreate?titleCreate=@Model.titleCreate">Klik her</a> for at oprette en begivenhed</p>
-    </html> *@
+    </html>
