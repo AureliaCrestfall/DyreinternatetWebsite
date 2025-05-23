@@ -52,37 +52,23 @@ namespace Dyreinternatet.Service
        public List<Animal> Sort(List<Animal> bubble)
         {
             
-            bool swapped = true;
-            int n = 0;
-            foreach(Animal animal in bubble)
-            {
-                n++;
-            }
-            while (swapped != false)
-            {
-
-                swapped = false;
-                for (int i = 0; i < n - 1; i++)
-                {
-                    if (bubble[i].Age > bubble[i + 1].Age)
-                    {
-                        (bubble[i], bubble[i + 1]) = (bubble[i + 1], bubble[i]);
-                        
-                        swapped = true;
-                    }
-                }
-            }
-            for (int i = 0; i < n ; i++)
-            {
-                bubble[i].ID = i;
-            }
             
-            return bubble;
+            
+            return _animalRepo.Sort(bubble);
         }
 
         public List<Animal> sherch(string shearchName)
         {
-            return _animalRepo.sherch(shearchName);
+            try
+            {
+                return _animalRepo.sherch(shearchName);
+
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+
         }
         public void Edit(int place, Animal editanimal)
         {

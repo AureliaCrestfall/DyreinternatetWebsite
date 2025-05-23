@@ -1,6 +1,6 @@
 using Dyreinternatet.Model;
 using Dyreinternatet.Service;
-using System.Diagnostics;
+//using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -31,7 +31,7 @@ namespace Dyreinternatet.Pages
         public void OnGet(int id)
         {
             idinfo = id;
-            Debug.WriteLine(id);
+            //Debug.WriteLine(id);
         }
         public IActionResult OnPost(int idinfo)
         {
