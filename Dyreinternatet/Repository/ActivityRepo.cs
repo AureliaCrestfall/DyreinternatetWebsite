@@ -36,5 +36,9 @@ namespace Dyreinternatet.Repository
             _activities[title].joiners.Add(joiners);
         }
 
+        public void Edit(int title, Activity activity)
+        {
+
+        }
     }
 }
