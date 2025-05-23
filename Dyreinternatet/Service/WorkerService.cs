@@ -23,5 +23,9 @@ namespace Dyreinternatet.Service
         {
             _workerRepo.Remove(id);
         }
+        public void Edit(int place, Worker editworker)
+        {
+            _workerRepo.Edit(place, editworker);
+        }
     }
 }

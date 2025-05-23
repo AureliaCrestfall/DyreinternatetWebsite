@@ -8,5 +8,7 @@ namespace Dyreinternatet.Repository
         List<Worker> GetAll();
         void Add(Worker woker);
         void Remove(int id);
+        void Edit(int place, Worker editworker);
+
     }
 }
