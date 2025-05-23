@@ -17,6 +17,7 @@ namespace Dyreinternatet.Pages
         public List <Animal> FilteredAnimals {get; set;}
         [BindProperty]
         public string searchname { set; get; }
+        [BindProperty]
         public bool dog { set; get; }
         [BindProperty]
         public bool cat { set; get; }
