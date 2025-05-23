@@ -88,7 +88,7 @@ namespace Dyreinternatet.Model
             _name = "bunny";
             _age = 12;
             _race = "bunny";
-            _timeAtShelter = DateTime.Now;
+            _timeAtShelter = DateTime.Now.Date.AddHours(DateTime.Now.Hour);
             _visits = new List<string>();
             //_statuses = new string[]();
             _description = "this is a bunny";
