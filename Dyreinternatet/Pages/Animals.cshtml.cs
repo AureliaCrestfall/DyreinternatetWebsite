@@ -91,5 +91,14 @@ namespace Dyreinternatet.Pages
             Animals=_animalS.Sort(sortanimals);
          
         }
+        public IActionResult OnPostDeleteAnimal(int ID)
+        {
+            _animalS.Remove(ID);
+
+
+            return RedirectToPage();
+
+
+        }
     }
 }
