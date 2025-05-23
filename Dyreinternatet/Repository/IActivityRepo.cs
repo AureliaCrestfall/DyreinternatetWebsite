@@ -8,8 +8,7 @@ namespace Dyreinternatet.Repository
         void Add(Activity activity);
         void Remove(int title);
 
-        void Edit(int place, Activity editactivity);
         void AddJoiners(int title, string joiners);
-        void Edit(int place, Activity editActivity);
+        void Edit(int title, Model.Activity editActivity);
     }
 }

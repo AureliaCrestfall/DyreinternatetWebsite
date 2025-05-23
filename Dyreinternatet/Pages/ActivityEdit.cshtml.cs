@@ -1,6 +1,6 @@
 using Dyreinternatet.Model;
 using Dyreinternatet.Service;
-//using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -36,7 +36,7 @@ namespace Dyreinternatet.Pages
         public IActionResult OnPost(int idinfo)
         {
 
-            Debug.WriteLine(idinfo + "testy" + Activity.Title);
+            Debug.WriteLine(idinfo + "test"+ Activity.Title);
             //Blog.ImagePath = Blogs[idinfo].ImagePath;
             _activityService.Edit(idinfo, Activity);
 
