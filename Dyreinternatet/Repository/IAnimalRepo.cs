@@ -3,7 +3,9 @@ namespace Dyreinternatet.Repository
 {
     public interface IAnimalRepo
     {
-
+        /// <summary>
+        /// All the methods that need to be implemented to use this interface
+        /// </summary>
         List<Animal> GetAll();
         void Add(Animal animals);
         void Remove(int chipNumber);

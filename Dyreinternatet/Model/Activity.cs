@@ -2,11 +2,29 @@
 {
     public class Activity
     {
+        /// <param>
+        /// Parameter for title of the activity
+        /// </param>
         string _title;
+        /// <param>
+        /// Parameter for content of the activity
+        /// </param>
         string _content;
+        /// <param>
+        /// Parameter for imagepath used for the activity
+        /// </param>
         string _imagePath;
+        /// <param>
+        /// Parameter for author of the activity
+        /// </param>
         string _author;
+        /// <param>
+        /// Parameter for location of the activity
+        /// </param>
         string _location;
+        /// <param>
+        /// Parameter for list of people joining the activity of the activity
+        /// </param>
         List<string> _joiners;
         public  string Title
             {
@@ -39,7 +57,9 @@
             set { _joiners = value; }
         }
 
-
+        /// <summary>
+        /// default constructor used for activities
+        /// </summary>
         public Activity()
         {
             _title = "test";
@@ -49,6 +69,14 @@
             _location = "roskilde";
             _joiners = new List<string>();
         }
+        /// <summary>
+        /// constructor for creating activities with the supplied values
+        /// </summary>
+        /// <param name="title">title of the activity</param>
+        /// <param name="content">content of the activity</param>
+        /// <param name="imagePath">imagepath for images for the activities</param>
+        /// <param name="author">author of the activities</param>
+        /// <param name="location"></param>
         public Activity(string title,string content,string imagePath,string author, string location):this()
         {
             _title = title;

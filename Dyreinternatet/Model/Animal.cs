@@ -4,18 +4,57 @@ namespace Dyreinternatet.Model
 {
     public class Animal
     {
+        /// <param>
+        /// Parameter for chipnumber per animal
+        /// </param>
         int _chipNumber;
+        /// <param>
+        /// Parameter for unique id per animal
+        /// </param>
         int _id;
+        /// <param>
+        /// Parameter for species of animals
+        /// </param>
         string _species;
+        /// <param>
+        /// Parameter for name animal
+        /// </param>
         string _name;
+        /// <param>
+        /// Parameter for age of animal
+        /// </param>
         int _age;
+        /// <param>
+        /// Parameter for race animal
+        /// </param>
         string _race;
-        public  enum Genderenum {Male,Female,Unknown};
+        /// <param>
+        /// Parameter for three different genders applied to the animal
+        /// </param>
+        public enum Genderenum {Male,Female,Unknown};
+        /// <param>
+        /// Parameter for DateTime variable to apply how long the animal has been at shelter
+        /// </param>
         DateTime _timeAtShelter;
+        /// <param>
+        /// List of parameters counting visits for the animal
+        /// </param>
         List<string> _visits;
+        /// <param>
+        /// Parameter for the description of the animal
+        /// </param>
         string _description;
+        /// <param>
+        /// Named the enum to be able to be utilized
+        /// </param>
         Genderenum _gender;
+        /// <param>
+        /// Parameter for adding images to the animal
+        /// </param>
         string _imgPath;
+        /// <summary>
+        /// Get/set for all of em
+        /// </summary>
         public int ID
         {
             get { return _id; }
@@ -75,6 +114,9 @@ namespace Dyreinternatet.Model
             get {return _description; }
             set { _description = value; }
         }
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public Animal()
         {
             
@@ -87,6 +129,10 @@ namespace Dyreinternatet.Model
             _visits = new List<string>();
             _description = "this is a bunny";
         }
+        /// <summary>
+        /// Constructor for chaining default constructor with chip
+        /// </summary>
+        /// <param name="chip">used for applying chipnumber to animal</param>
         public Animal(int chip) : this()
         {
 
@@ -101,8 +147,17 @@ namespace Dyreinternatet.Model
             _id = _chipNumber;
 
         }
-
-        //:this() means chaining with the before constructor animal
+        /// <summary>
+        /// Constructor for creating a new animal with all included parameters
+        /// </summary>
+        /// <param name="chip">Chipnumber of animal</param>
+        /// <param name="species">Species of animal</param>
+        /// <param name="name">Name of animal</param>
+        /// <param name="race">Race of animal</param>
+        /// <param name="age">Age of animal</param>
+        /// <param name="timeatshelter">DateTime for length of stay at shelter</param>
+        /// <param name="description">Description of animal</param>
+        /// <param name="gender">Gender of animal</param>
         public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender) : this(chip)
         {
 
@@ -128,8 +183,19 @@ namespace Dyreinternatet.Model
 
             }
         }
-
-         public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender,string path) : this( chip, species, name, race, age, timeatshelter, description,  gender)
+        /// <summary>
+        /// Constructor for adding random image to animal created
+        /// </summary>
+        /// <param name="chip">Chipnumber of animal</param>
+        /// <param name="species">Species of animal</param>
+        /// <param name="name">Name of animal</param>
+        /// <param name="race">Race of animal</param>
+        /// <param name="age">Age of animal</param>
+        /// <param name="timeatshelter">DateTime for length of stay at shelter</param>
+        /// <param name="description">Description of animal</param>
+        /// <param name="gender">Gender of animal</param>
+        /// <param name="path">Path of the imagefile applied</param>
+        public Animal(int chip, string species, string name, string race, int age, DateTime timeatshelter, string description, string gender,string path) : this( chip, species, name, race, age, timeatshelter, description,  gender)
          {
             _imgPath = path;
          }

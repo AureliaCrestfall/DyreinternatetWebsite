@@ -2,10 +2,25 @@
 {
     public class Worker
     {
+        /// <param>
+        /// Parameter for name of worker
+        /// </param>
         string _name;
+        /// <param>
+        /// Parameter for ID of worker
+        /// </param>
         int _id;
+        /// <param>
+        /// Parameter for email of worker
+        /// </param>
         string _mail;
+        /// <param>
+        /// Parameter for telephone number of worker
+        /// </param>
         string _telephone;
+        /// <param>
+        /// Parameter for jobtitle of worker
+        /// </param>
         string _jobTitle;
 
         public string Name
@@ -37,6 +52,9 @@
             get { return _jobTitle; }
             set { _jobTitle = value; }
         }
+        /// <summary>
+        /// default constructor 
+        /// </summary>
         public Worker()
         {
             _name = "Dumbo";
@@ -45,6 +63,14 @@
             _mail = "dumbo@dumbo.com";
             _jobTitle = "Frivillig";
         }
+        /// <summary>
+        /// Constructor for creating a new worker with supplied values
+        /// </summary>
+        /// <param name="name">name of worker</param>
+        /// <param name="id">id of worker</param>
+        /// <param name="telephone">telephone number of worker</param>
+        /// <param name="mail">email of worker</param>
+        /// <param name="jobTitle">job title of worker</param>
         public Worker(string name, int id, string telephone, string mail, string jobTitle)
         {
             _name = name;
